@@ -6,3 +6,6 @@ This repo contains my (Jonas Heim) work for the data visualization class, taken 
 
 ### Organization
 The weekly homeworks can be found in the week_## folders.
+
+### Topics
+1. TBD
