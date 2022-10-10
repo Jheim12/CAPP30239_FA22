@@ -10,4 +10,8 @@ There are only a few elements present in this repository:
 - **data:** The data used in the various projects
 
 ### Topics
-1. TBD
+1. Class Introduction, HTML/CSS/JS
+2. Data Humanism, Data, and JavaScript
+
+### Data
+- **SwissTowns_2021.xlsx:** Key data regarding every Swiss town in 2021, which includes but is not limited to the population, space-usage, the economy, and politics. 
