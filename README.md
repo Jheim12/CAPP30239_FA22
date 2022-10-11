@@ -12,6 +12,7 @@ There are only a few elements present in this repository:
 ### Topics
 1. Class Introduction, HTML/CSS/JS
 2. Data Humanism, Data, and JavaScript
+3. Data Visualization Theories, Intro to D3.js, and Bar Charts
 
 ### Data
 - **SwissTowns_2021.xlsx:** Key data regarding every Swiss town in 2021, which includes but is not limited to the population, space-usage, the economy, and politics. *(source: [Federal Statistical Office](https://www.bfs.admin.ch/bfs/en/home.html))*
