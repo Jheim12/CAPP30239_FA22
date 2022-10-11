@@ -1,0 +1,151 @@
+﻿country,year,total_rail_traffic (million train-km),passenger_services (% train-km),billion_passenger_km
+AT - Austria,2020,162,70%,7.4
+BE - Belgium,2020,93,87%,7.9
+BG - Bulgaria,2020,30,70%,1.1
+HR - Croatia,2020,20,64%,0.4
+CZ - Czech Republic,2020,168,79%,6.5
+DK - Denmark,2020,89,96%,4.3
+EE - Estonia,2020,6,82%,0.3
+FI - Finland,2020,48,71%,2.8
+FR - France,2020,355,85%,53.8
+DE - Germany,2020,1'091,77%,59.5
+GR - Greece,2020,9,88%,0.7
+HU - Hungary,2020,103,82%,4.9
+IE - Ireland,2020,15,98%,0.8
+IT - Italy,2020,324,85%,21.6
+XK - Kosovo**,2020,0,71%,0
+LV - Latvia,2020,11,56%,0.4
+LT - Lithuania,2020,16,39%,0.3
+LU - Luxembourg,2020,7,95%,0.3
+NL - Netherlands,2020,148,93%,8.9
+MK - North Macedonia,2020,1,61%,0
+NO - Norway,2020,45,83%,1.8
+PL - Poland,2020,237,67%,12.6
+PT - Portugal,2020,33,82%,2.6
+RO - Romania,2020,80,72%,3.7
+RS - Serbia,2020,14,56%,0.2
+SK - Slovakia,2020,48,71%,2.3
+SI - Slovenia,2020,18,43%,0.4
+ES - Spain,2020,143,85%,11.2
+SE - Sweden,2020,149,76%,8.1
+CH - Switzerland,2020,222,88%,13.3
+UK - United Kingdom,2020,486,94%,25.1
+AT - Austria,2019,171,70%,13.4
+BE - Belgium,2019,100,87%,12
+BG - Bulgaria,2019,30,71%,1.5
+HR - Croatia,2019,22,70%,0.7
+CZ - Czech Republic,2019,175,78%,10.9
+DK - Denmark,2019,86,96%,6.6
+EE - Estonia,2019,7,81%,0.4
+FI - Finland,2019,51,71%,4.9
+FR - France,2019,437,86%,93.5
+DE - Germany,2019,1'122,76%,102.9
+GR - Greece,2019,11,91%,1.3
+HU - Hungary,2019,104,80%,7.8
+IE - Ireland,2019,19,99%,2.4
+IT - Italy,2019,382,87%,55.1
+KS - Kosovo**,2019,0,71%,0
+LV - Latvia,2019,14,42%,0.6
+LT - Lithuania,2019,17,42%,0.5
+LU - Luxembourg,2019,8,94%,0.5
+NL - Netherlands,2019,164,93%,19.7
+MK - Republic of North Macedonia,2019,,,
+NO - Norway,2019,50,83%,3.7
+PL - Poland,2019,252,67%,21.9
+PT - Portugal,2019,36,83%,5.5
+RO - Romania,2019,91,74%,5.8
+RS - Serbia,2019,15,58%,0.3
+SK - Slovakia,2019,52,71%,4.2
+SI - Slovenia,2019,21,48%,0.7
+ES - Spain,2019,193,87%,27.3
+SE - Sweden,2019,163,78%,14.6
+CH - Switzerland,2019,229,88%,21.7
+UK - United Kingdom,2019,594,94%,71.8
+AT - Austria,2018,165,69%,13.3
+BE - Belgium,2018,100,87%,13
+BG - Bulgaria,2018,29,72%,1.5
+HR - Croatia,2018,21,72%,0.8
+CZ - Czech Republic,2018,173,78%,10.3
+DK - Denmark,2018,82,96%,6.5
+EE - Estonia,2018,7,75%,0.4
+FI - Finland,2018,51,69%,4.5
+FR - France,2018,443,86%,89
+DE - Germany,2018,1'116,75%,99.9
+GR - Greece,2018,11,92%,1.2
+HU - Hungary,2018,105,79%,7.8
+IE - Ireland,2018,,,0
+IT - Italy,2018,374,87%,54
+KS - Kosovo**,2018,0,79%,0
+LV - Latvia,2018,15,38%,0.6
+LT - Lithuania,2018,16,39%,0.5
+LU - Luxembourg,2018,8,93%,0.4
+MK - Republic of North Macedonia,2018,1,88%,0.1
+NL - Netherlands,2018,163,93%,19.6
+NO - Norway,2018,49,84%,3.7
+PL - Poland,2018,254,65%,20.9
+PT - Portugal,2018,37,82%,4.5
+RO - Romania,2018,90,74%,5.6
+SK - Slovakia,2018,52,70%,4
+SI - Slovenia,2018,21,47%,0.7
+SR - Serbia,2018,15,61%,0.3
+ES - Spain,2018,193,87%,26.9
+SE - Sweden,2018,162,77%,13.5
+CH - Switzerland,2018,226,87%,20.6
+UK - United Kingdom,2018,568,94%,69.7
+Austria,2017,165,69%,12.7
+Belgium,2017,99,86%,
+Bulgaria,2017,30,72%,1.4
+Croatia,2017,22,74%,0.7
+Czech Republic,2017,168,78%,9.5
+Denmark,2017,82,95%,6.6
+Estonia,2017,7,79%,0.4
+Finland,2017,48,70%,4.3
+France,2017,475,86%,92.4
+Germany,2017,1104,75%,97.7
+Greece,2017,11,92%,1.2
+Hungary,2017,104,80%,7.7
+Italy,2017,366,87%,51.6
+Kosovo,2017,0.3,79%,0.01
+Latvia,2017,14,41%,0.6
+Lithuania,2017,15,41%,0.4
+Luxembourg,2017,8,94%,0.4
+Republic of North Macedonia,2017,2,72%,0.1
+Netherlands,2017,160,93%,19.5
+Norway,2017,52,79%,3.6
+Poland,2017,240,67%,20.2
+Portugal,2017,37,83%,4.4
+Romania,2017,94,74%,5.7
+Slovakia,2017,51,69%,3.9
+Slovenia,2017,22,47%,0.7
+Spain,2017,193,87%,26.1
+Sweden,2017,160,77%,13.3
+Switzerland,2017,226,87%,20.9
+United Kingdom,2017,567,94%,68.9
+Austria,2016,162,69%,12.6
+Belgium,2016,96,86%,
+Bulgaria,2016,29,74%,1.5
+Croatia,2016,21,74%,0.8
+Denmark,2016,83,96%,6.7
+Estonia,2016,7,76%,
+Finland,2016,47,72%,3.9
+France,2016,473,85%,86.7
+Germany,2016,1098,76%,95.1
+Greece,2016,11,92%,1.2
+Hungary,2016,102,82%,7.7
+Italy,2016,356,87%,50.1
+Kosovo,2016,0.3,89%,0
+Latvia,2016,16,39%,0.6
+Lithuania,2016,14,42%,0.4
+Luxembourg,2016,8,94%,
+FYR Macedonia,2016,2,78%,0.1
+Netherlands,2016,163,90%,19.6
+Norway,2016,47,85%,3.7
+Poland,2016,229,68%,19.1
+Portugal,2016,37,84%,4.1
+Romania,2016,80,71%,5
+Slovakia,2016,50,70%,3.4
+Slovenia,2016,21,48%,0.7
+Spain,2016,192,87%,25.3
+Sweden,2016,158,77%,12.8
+Switzerland,2016,224,87%,20.4
+United Kingdom,2016,566,94%,68
