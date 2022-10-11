@@ -14,4 +14,6 @@ There are only a few elements present in this repository:
 2. Data Humanism, Data, and JavaScript
 
 ### Data
-- **SwissTowns_2021.xlsx:** Key data regarding every Swiss town in 2021, which includes but is not limited to the population, space-usage, the economy, and politics. 
+- **SwissTowns_2021.xlsx:** Key data regarding every Swiss town in 2021, which includes but is not limited to the population, space-usage, the economy, and politics. *(source: [Federal Statistical Office](https://www.bfs.admin.ch/bfs/en/home.html))*
+- **trains_europe:** Million train-km (with share of passenger trains) and the billion passenger-km per country in the Schengen area from 2016 to 2020. *(source: [IRG - Rail](https://www.irg-rail.eu/irg))*
+- **trains_switzerland:** Many key metrics from the SBB (Swiss National Railway Company) regarding their operations and environmental impact from 1903 to 2021, but most data is only available from 2010 onwards *(source: [SBB CFF FFS](https://www.sbb.ch/en/home.html))*
