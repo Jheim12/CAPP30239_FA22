@@ -13,3 +13,4 @@ After completing a barchart in class, it was our turn to make one of our own. He
   - [homework.html](./homework.html): Homwork html-code
   - [homework.js](./homework.js): Homework javascript-code
   - [library_visits_jan22.csv](./library_visits_jan22.csv): Number of library visits per library near UChicago (source: Chicago Data Portal)
+ 
