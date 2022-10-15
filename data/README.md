@@ -24,7 +24,7 @@ I have two datasets, one at the Swiss and one at the European level:
   - Source: Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR), [link](https://www.irg-rail.eu/irg/documents/market-monitoring)
   - Timeframe: 2016 to 2020 with very little missing data
   - Potential data points: million train-km, billion passenger-km per year for 31 countries
-  - Concerns: measuring discrepancies between this dataset and the one from the National Railway company and inconsistent measuring between the countries
+  - Concerns: measuring discrepancies between this dataset and the one from the National Railway company, inconsistent measuring between the countries, and 1-2 missing years for the Czech Republic, Ireland, and Serbia
   - Source Type: secondary, as I will use it to contrast the Swiss National Railway Company's response to the pandemic with other countries in Europe
 
 ### Potential Plots
