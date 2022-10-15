@@ -18,7 +18,19 @@ I have two datasets, one at the Swiss and one at the European level:
   - Timeframe: 1903 to 2021 but most data is only available from 2010 onwards, which is sufficient as our analysis will center around the pandemic
   - Potential data points: million train-km, million passenger-km, energy consumption (kWh/100 Pkm), greenhouse gass emissions (g/100 Pkm)
   - Concerns: Missing data and potential changes in reporting standards
-  - Source Type: Secondary as it is collected and published by the National Railway Company, but this will be my primary dataset as I will use it to analyse the offer and demand of railservice through the pandemic years
+  - Source Type: primary as I will use it to analyse the offer and demand of railservice in Switzerland through the pandemic years
   
-
 - trains_europe: Million train-km (with share of passenger trains) and the billion passenger-km per country in the Schengen area from 2016 to 2020. (source: IRG - Rail)
+  - Source: Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR), ]link](https://www.irg-rail.eu/irg/documents/market-monitoring)
+  - Timeframe: 2016 to 2020 with very little missing data
+  - Potential data points: million train-km, billion passenger-km per year for 31 coutries
+  - Concerns: measuring discreptancies between this dataset and the one from the National Railway company and inconsisten meansuring between the countries
+  - Source Type: secondary, as I will use it to contrast the Swiss National Railway Company's repsonse to the pandemic with other countries in Europe
+
+### Potential Plots
+
+With the prior dataset, I hope to display service metrics and contrast them with the demand and emissions/energy consumption. I think an overlapping linechart or barchart with the demand above and the emissions/energy consumption below the x-axis could work well.
+
+To compare the pandemic response with other countries, I would like to create a map displaying the train-km and passenger-km metrics in an appealing way.
+
+Then, undouboubly, these two types of graphs will reveal patterns that will prompt discussions and further questions that can be investigated with other graphs! :)
