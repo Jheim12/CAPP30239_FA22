@@ -33,4 +33,4 @@ With the prior dataset, I hope to display service metrics and contrast them with
 
 To compare the pandemic response with other countries, I would like to create a map displaying the train-km and passenger-km metrics in an appealing way.
 
-Then, undoubtably, these two types of graphs will reveal patterns that will prompt discussions and further questions that can be investigated with other graphs! :smirk:
+Then, undoubtably, these two types of graphs will reveal patterns that will prompt discussions and further questions that can be investigated with other graphs! :grin:
