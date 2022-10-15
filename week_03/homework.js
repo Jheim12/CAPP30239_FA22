@@ -69,8 +69,8 @@ d3.csv("library_visits_jan22.csv").then(data => { // load the data
     // add values to rectangles
     bar.append("text")
         .text(d => d.num)
-        .attr('x', d => x(d.branch) + (x.bandwidth()/2))
-        .attr('y', d => y(d.num) + 15)
-        .attr('text-anchor', 'middle')
-        .style('fill', 'white');   
+        .attr("x", d => x(d.branch) + (x.bandwidth()/2))
+        .attr("y", d => y(d.num) + 15)
+        .attr("text-anchor", "middle")
+        .style("fill", "white");
 });
