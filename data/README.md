@@ -13,14 +13,14 @@ I will mention, however, that the intention is not to necessarily critique the r
 ### Datasets
 
 I have two datasets, one at the Swiss and one at the European level:
-- trains_switzerland.csv: many key metrics from the National Railway Company regarding their operations and environmental impact
+- **trains_switzerland.csv:** many key metrics from the National Railway Company regarding their operations and environmental impact
   - Source: Swiss National Railway Company, Statistics Portal (though custom request had to be made), Bern (CH), [link](https://reporting.sbb.ch/en/home?sv_lang=3&sv_lang_change=true)
   - Timeframe: 1903 to 2021 but most data is only available from 2010 onwards, which is sufficient as our analysis will center around the pandemic
   - Potential data points: million train-km, million passenger-km, energy consumption (kWh/100 Pkm), greenhouse gas emissions (g/100 Pkm)
   - Concerns: Missing data and potential changes in reporting standards
   - Source Type: primary as I will use it to analyse the offer and demand of rail service in Switzerland through the pandemic years
   
-- trains_europe.csv: rail service metrics per year for countries in Europe
+- **trains_europe.csv:** rail service metrics per year for countries in Europe
   - Source: Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR), [link](https://www.irg-rail.eu/irg/documents/market-monitoring)
   - Timeframe: 2016 to 2020 with very little missing data
   - Potential data points: million train-km, billion passenger-km per year for 31 countries
