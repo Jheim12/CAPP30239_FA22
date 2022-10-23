@@ -76,9 +76,22 @@ d3.csv('long-term-interest-canada.csv').then(data => {
 
     // Add the line to the svg
     svg.append("path")
-        .datum(data)
-        .attr("d", line)
-        .attr("fill", "none")
-        .attr("stroke", "steelblue");
+        .datum(data)                // Select the data
+        .attr("d", line)            // Define type
+        .attr("fill", "none")       // fill straight line of extermities to actual line
+        .attr("stroke-width", 5)    // Define width of the line
+        .attr("stroke", "black");   // Color of the line
 
+    // Define the area under the line
+        let area = d3.area()
+        .x(d => x(d.Month))         // x-value
+        .y0(y(0))                   // Baseline y-value
+        .y1(d => y(d.Num))          // Line y-value
+        .curve(d3.curveNatural);    // Making the line curvy
+
+    // Add the area to the svg
+    svg.append('path')
+        .datum(data)                // Select the data
+        .attr('d', area)            // Calls the area defined above
+        .attr('fill', 'steelblue')  // Color the area defined above
 });
