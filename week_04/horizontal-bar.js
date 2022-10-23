@@ -6,7 +6,7 @@ d3.csv("covid.csv").then(data => {
         d.cases = +d.cases; //force a number
     };
 
-    data.sort((a, b) => b.cases - a.cases);
+    data.sort((a, b) => b.cases - a.cases); // sort cases
 
     const height = 600,
           width = 800,
@@ -17,7 +17,7 @@ d3.csv("covid.csv").then(data => {
         .attr("viewBox", [0, 0, width, height]); // for resizing element in browser
 
     let x = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.cases)]).nice()
+        .domain([0, d3.max(data, d => d.cases)]).nice() // d => d.cases is a loop to go over the data
         .range([margin.left, width - margin.right]);
     
     let y = d3.scaleBand()
@@ -54,4 +54,10 @@ d3.csv("covid.csv").then(data => {
         .attr('dominant-baseline', 'middle')
         .style('fill', 'white');
 
+    svg.append("text")
+        .attr("class", "x-label")
+        .attr("text-anchor", "end")
+        .attr("x", width - margin.right)
+        .attr("y", height)
+        .text("country code")
 });

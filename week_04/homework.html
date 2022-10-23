@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada's LT IR</title>
+    <style>
+    * {                 /* Define the fonts for the entire page */
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #container {            /* Define the width and margin of the visualization */
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+
+    #chart {                /* Display the chart to its entire width */
+        width: 100%; 
+    }
+
+    text {                  /* Set the font size of the visualization*/
+        font-size: 10px;
+    }
+
+    .y-axis path.domain {   /* Remove the line and ticks from the y-axis */
+        display: none;  
+    }
+
+    .y-axis line {          /* Set style of the horizontal grid */
+        stroke: #ddd;
+        stroke-dasharray: 2;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">                                    <!-- Display some text -->
+        <h1>Interest Rates by Year (Canada)</h1>
+        <p>
+            This line chart uses long-term-interest-canada.csv 
+            which shows change of monthly interest rates over time in Canada.
+        </p>
+        <div id="chart"></div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>   <!-- Import D3 -->
+    <script src="homework.js"></script>                         <!-- Call the visualization -->
+</body>
+</html>
