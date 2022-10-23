@@ -13,6 +13,7 @@ There are only a few elements present in this repository:
 1. Class Introduction, HTML/CSS/JS
 2. Data Humanism, Data, and JavaScript
 3. Data Visualization Theories, Intro to D3.js, and Bar Charts
+4. Storytelling, Change over time
 
 ### Data
 - **trains_switzerland:** Many key metrics from the SBB (Swiss National Railway Company) regarding their operations and environmental impact from 1903 to 2021, but most data is only available from 2010 onwards *(source: [SBB CFF FFS](https://www.sbb.ch/en/home.html))*
