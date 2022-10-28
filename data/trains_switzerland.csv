@@ -1,4 +1,4 @@
-Year,train-km (mio),train-km_long_distance (mio),passenger-km (mio),passengers_per_day (mio),avg_passengers_per_train,avg_travel_distance_per_passenger,train-km_cargo (mio),energy_consumption_passenger (kWh/100 Pkm),energy_consumption_cargo (kWh/100 Ntkm),greenhouse_gas_passenger (g/100 Pkm),greenhouse_gas_passenger (g/100 Ntkm)
+Year,train-km (mio),train-km_long_distance (mio),passenger-km (mio),passengers_per_day (mio),avg_passengers_per_train,avg_travel_distance_per_passenger,train-km_cargo (mio),energy_consumption_passenger (kWh/100 Pkm),energy_consumption_cargo (kWh/100 Ntkm),greenhouse_gas_passenger (g/100 Pkm),greenhouse_gas_cargo (g/100 Ntkm)
 1903,,,1048.6,,,,,,,,
 1904,,,,,,,,,,,
 1905,,,,,,,,,,,

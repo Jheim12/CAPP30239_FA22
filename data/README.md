@@ -20,8 +20,8 @@ I have two datasets, one at the Swiss and one at the European level:
   - Concerns: Missing data and potential changes in reporting standards
   - Source Type: primary as I will use it to analyse the offer and demand of rail service in Switzerland through the pandemic years
   
-- **trains_europe.csv:** rail service metrics per year for countries in Europe
-  - Source: Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR), [link](https://www.irg-rail.eu/irg/documents/market-monitoring)
+- **trains_europe.csv:** rail service metrics per year for countries in Europe (with additional information about a country's size and population)
+  - Source: Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR), [link](https://www.irg-rail.eu/irg/documents/market-monitoring) ([size](https://data.worldbank.org/indicator/AG.LND.TOTL.K2) and [population](https://data.worldbank.org/indicator/SP.POP.TOTL) information from the World Bank)
   - Timeframe: 2016 to 2020 with very little missing data
   - Potential data points: million train-km, billion passenger-km per year for 31 countries
   - Concerns: measuring discrepancies between this dataset and the one from the National Railway company, inconsistent measuring between the countries, and 1-2 missing years for the Czech Republic, Ireland, and Serbia
