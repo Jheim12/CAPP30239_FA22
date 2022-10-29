@@ -12,7 +12,7 @@ I will mention, however, that the intention is not to necessarily critique the r
 
 ### Datasets
 
-I have two datasets, one at the Swiss and one at the European level:
+I have three datasets, one at the Swiss and one at the European level:
 - **trains_switzerland.csv:** many key metrics from the National Railway Company regarding their operations and environmental impact
   - Source: Swiss National Railway Company, Statistics Portal (though custom request had to be made), Bern (CH), [link](https://reporting.sbb.ch/en/home?sv_lang=3&sv_lang_change=true)
   - Timeframe: 1903 to 2021 but most data is only available from 2010 onwards, which is sufficient as our analysis will center around the pandemic
@@ -26,6 +26,13 @@ I have two datasets, one at the Swiss and one at the European level:
   - Potential data points: million train-km, billion passenger-km per year for 31 countries
   - Concerns: measuring discrepancies between this dataset and the one from the National Railway company, inconsistent measuring between the countries, and 1-2 missing years for the Czech Republic, Ireland, and Serbia
   - Source Type: secondary, as I will use it to contrast the Swiss National Railway Company's response to the pandemic with other countries in Europe
+
+- **infrastructure_europe.csv:** Trail rail route-km per countries in Europe (with additional information about a country's size)
+  - Source: The World Bank Data (2022), World Bank Group, Washington, D.C. (US), [link](https://data.worldbank.org/indicator/IS.RRS.TOTL.KM) ([size](https://data.worldbank.org/indicator/AG.LND.TOTL.K2))
+  - Timeframe: 2019
+  - Potential data points: rail-km
+  - Concerns: some missing data
+  - Source Type: Secondary, as I will use it to introduce the topic
 
 ### Potential Plots
 
