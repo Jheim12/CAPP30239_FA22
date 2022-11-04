@@ -88,7 +88,7 @@ d3.json('climate.json').then((data) => {
             }
         );
 
-        svg.selectAll("foreignObject").remove();
+        svg.selectAll("foreignObject").remove();        // foreignObject annotation on the histogram
 
         let temp = d3.mean(data[m], d => d.average).toFixed(1);
         let str = `The average temperature in 
