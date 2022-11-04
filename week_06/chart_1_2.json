@@ -1,0 +1,22 @@
+[
+    {
+        "ethnicity": "White",
+        "count": 57.8
+    },
+    {
+        "ethnicity": "Black",
+        "count": 12.1
+    },
+    {
+        "ethnicity": "Hispanic",
+        "count": 18.7
+    },
+    {
+        "ethnicity": "NA",
+        "count": 4.1
+    },
+    {
+        "ethnicity": "Other",
+        "count": 7.3
+    }
+]
