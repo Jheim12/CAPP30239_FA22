@@ -11,7 +11,7 @@ d3.csv("chart_3.csv").then(data => {
     let x = d3.scaleBand(data.map(d => (d.Armed)),[margin.left, width - margin.right])
         .padding([0.2]);
 
-    let y = d3.scaleLinear([0,1000],[height - margin.bottom, margin.top]);
+    let y = d3.scaleLinear([0,100],[height - margin.bottom, margin.top]);
 
     svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom})`)
@@ -42,12 +42,13 @@ d3.csv("chart_3.csv").then(data => {
         .attr("height", d => y(d[0]) - y(d[1]))
         .attr("width",x.bandwidth())
 
-    // // Manual legend
-    // svg.append("circle").attr("cx",10).attr("cy",10).attr("r", 6).style("fill", "#e41a1c")
-    // svg.append("circle").attr("cx",110).attr("cy",10).attr("r", 6).style("fill", "#377eb8")
-    // svg.append("circle").attr("cx",205).attr("cy",10).attr("r", 6).style("fill", "#4daf4a")
-    // svg.append("text").attr("x", 20).attr("y", 10).text("protein").style("font-size", "15px").attr("alignment-baseline","middle")
-    // svg.append("text").attr("x", 130).attr("y", 10).text("carbs").style("font-size", "15px").attr("alignment-baseline","middle")
-    // svg.append("text").attr("x", 225).attr("y", 10).text("fiber").style("font-size", "15px").attr("alignment-baseline","middle")
-
+    // Manual legend
+    svg.append("circle").attr("cx",10).attr("cy",10).attr("r", 6).style("fill", "#e41a1c")
+    svg.append("circle").attr("cx",110).attr("cy",10).attr("r", 6).style("fill", "#377eb8")
+    svg.append("circle").attr("cx",205).attr("cy",10).attr("r", 6).style("fill", "#4daf4a")
+    svg.append("circle").attr("cx",400).attr("cy",10).attr("r", 6).style("fill", "#000")
+    svg.append("text").attr("x", 20).attr("y", 10).text("Shot").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 130).attr("y", 10).text("Tasered").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 225).attr("y", 10).text("Shot and Tasered").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 420).attr("y", 10).text("Other").style("font-size", "15px").attr("alignment-baseline","middle")
 });
