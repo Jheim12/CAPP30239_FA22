@@ -1,0 +1,8 @@
+year,train_km,train_km_long_distance,passenger_km,passengers_per_day,avg_passengers_per_train,avg_travel_distance_per_passenger,train_km_cargo,energy_consumption_per_passenger,energy_consumption_per_cargo,greenhouse_gas_per_passenger,greenhouse_gas_per_cargo,total_passenger_energy_consumption
+2015,148.6,68.5,18559.9,1210408,127.8,40.8,34.5,8.4,4.4,9.1,147,1559.0316
+2016,151.8,68.9,18960,1252515,127.7,40.2,36,8.6,4.4,14.4,153.1,1630.56
+2017,150.6,67.6,18501.4,1239427,125.4,39.7,36.3,8.5,4.3,14.6,171.7,1572.619
+2018,147.5,66.2,18608.1,1248908,126.9,39.8,36.2,8.4,4.3,15.5,188.2,1563.0804
+2019,151,67.3,19689.2,1321790,131,39.7,35.3,7.9,4.4,14.5,188,1555.4468
+2020,146.6,63.8,11705.1,843335,80.9,37.2,33.9,12.1,4,22.2,189.6,1416.3171
+2021,153.2,66.4,12504.7,884722,82.3,37.8,34.8,11.9,4.1,21.7,186.5,1488.0593

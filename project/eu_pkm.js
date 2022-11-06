@@ -1,14 +1,14 @@
-const height = 500,
-    width = 800,
-    margin = ({ top: 15, right: 30, bottom: 35, left: 40 })
-    innerWidth = width - margin.left - margin.right;
-    
-const svg = d3.select("#chart")      // DOUBLE CHECK #chart
-    .append("svg")
-    .attr("viewBox", [0, 0, width, height]);
-
 d3.csv('trains_europe.csv').then(data => {        // RELATIVE PATH?
     
+    const height = 500,
+        width = 800,
+        margin = ({ top: 15, right: 30, bottom: 35, left: 40 })
+        innerWidth = width - margin.left - margin.right;
+    
+    const svg = d3.select("#eu_pkm")
+        .append("svg")
+        .attr("viewBox", [0, 0, width, height]);
+
     let timeParse = d3.timeParse("%Y")
 
     let countries = new Set()
@@ -25,7 +25,7 @@ d3.csv('trains_europe.csv').then(data => {        // RELATIVE PATH?
         d.passenger_km_per_capita = +d.passenger_km_per_capita
     };
 
-    console.log(data);      //  DELETE
+    // console.log(data);      //  DELETE
     
     let x = d3.scaleTime()
         .domain(d3.extent(data, d => d.year))
