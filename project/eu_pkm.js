@@ -2,7 +2,7 @@ d3.csv('trains_europe.csv').then(data => {        // RELATIVE PATH?
     
     const height = 500,
         width = 800,
-        margin = ({ top: 15, right: 30, bottom: 35, left: 40 })
+        margin = ({ top: 15, right: 60, bottom: 35, left: 40 })
         innerWidth = width - margin.left - margin.right;
     
     const svg = d3.select("#eu_pkm")
@@ -75,27 +75,42 @@ d3.csv('trains_europe.csv').then(data => {        // RELATIVE PATH?
     
         let g = svg.append("g")
             .attr("class", "country")
-            .on('mouseover', function () {
-            d3.selectAll(".highlight").classed("highlight", false);
-            d3.select(this).classed("highlight", true);
-            });
+            // .on('mouseover', function () {
+            // d3.selectAll(".highlight").classed("highlight", false);     // highlight --> delete from html/css?
+            // d3.select(this).classed("highlight", true);
+            // });
         
         if (country === "Switzerland") {
-                g.classed("highlight", true);
+            // g.classed("highlight", true);       // highlight
 
-                let lastEntry = countryData[0];
-                g.append("text")
-                    .text(country)
-                    .attr("x", x(lastEntry.year) + 3)
-                    .attr("y", y(lastEntry.passenger_km_per_capita))
-                    .attr("dominant-baseline", "middle")
-                    .attr("fill", "#999");
-            }
+            let lastEntry = countryData[0];
+            g.append("text")
+                .text(country)
+                .attr("x", x(lastEntry.year) + 3)
+                .attr("y", y(lastEntry.passenger_km_per_capita))
+                .attr("dominant-baseline", "middle")
+                .attr("fill", "red");
+            
+            g.append("path")
+                .datum(countryData)
+                .attr("fill", "none")
+                .attr("stroke", "red")
+                .attr("d", line)
+                .attr("stroke-width", 3)
+        }
         
-        g.append("path")
-            .datum(countryData)
-            .attr("fill", "none")
-            .attr("stroke", "#ccc")
-            .attr("d", line)
+        else {
+            g.append("path")
+                .datum(countryData)
+                .attr("fill", "none")
+                .attr("stroke", "#ccc")
+                .attr("d", line)
+                .on("mouseover", function() {
+                    d3.select(this).style("stroke", "red")      // Add country name on the side
+                })
+                .on("mouseout", function() {        // Mouseout not working...
+                    d3.select(this).attr("stroke", "#ccc");
+                })
+        }
     }
 });
