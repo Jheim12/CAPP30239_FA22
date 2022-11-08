@@ -41,7 +41,7 @@ d3.csv('penguins.csv').then(data => {
     .style("position", "absolute")
     .style("visibility", "hidden");
 
-    d3.selectAll("circle")      // Define the mouseover for teh tooltip
+    d3.selectAll("circle")      // Define the mouseover for the tooltip
     .on("mouseover", function(event, d) {
         d3.select(this).attr("fill", "red");    // make red
         tooltip

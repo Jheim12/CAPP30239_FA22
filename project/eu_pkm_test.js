@@ -5,7 +5,7 @@ d3.csv('trains_europe.csv').then(data => {
         margin = ({ top: 15, right: 60, bottom: 35, left: 40 })
         innerWidth = width - margin.left - margin.right;
     
-    const svg = d3.select("#eu_pkm")
+    const svg = d3.select("#eu_pkm_test")
         .append("svg")
         .attr("viewBox", [0, 0, width, height]);
 
@@ -15,14 +15,18 @@ d3.csv('trains_europe.csv').then(data => {
 
     for (let d of data) {
         countries.add(d.country)
-        d.year = timeParse(d.year)
+        // d.year = timeParse(d.year)
+        d.year = +d.year
         d.passenger_km_per_capita = +d.passenger_km_per_capita
     };
     
     // Define x scale
-    let x = d3.scaleTime()
-        .domain(d3.extent(data, d => d.year))
-        .range([margin.left, width - margin.right])
+    // let x = d3.scaleTime()
+    //     .domain(d3.extent(data, d => d.year))
+    //     .range([margin.left, width - margin.right])
+    let x = d3.scaleLinear()                                // REMOVE COMMA FROM YEARS?
+        .domain(d3.extent(data, d => d.year)).nice()
+        .range([margin.left, width - margin.right]);
 
     // Define y scale
     let y = d3.scaleLinear()
@@ -120,4 +124,45 @@ d3.csv('trains_europe.csv').then(data => {
                 });
         }
     }
+
+
+
+
+
+    // Add invisible scatterplot-----------------------------------------------
+
+    // Adding the scatterplot
+    svg.append("g")
+        .attr("fill", "black")
+        .selectAll("circle")
+        .data(data)
+        .join("circle")
+        .attr("cx", d => x(d.year))
+        .attr("cy", d => y(d.passenger_km_per_capita))
+        .attr("r", 2)
+        .attr("opacity", 0.75);
+
+    // Define the tooltip
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "svg-tooltip")
+        .style("position", "absolute")
+        .style("visibility", "hidden");
+
+    // Information to display
+    d3.selectAll("circle")
+        .on("mouseover", function(event, d) {
+            d3.select(this).attr("fill", "red");
+            tooltip
+            .style("visibility", "visible")                 // ADD THE 1'000 SEPARATOR FOR PKM?
+            .html(`${d.country} in ${d.year}:<br>Total Pkm: ${d.passenger_km * 1000} M<br>Population: ${(Math.round(d.population / 10000, 2) / 100).toFixed(2)} M`);
+        })
+        .on("mousemove", function(event) {      // Put text to the mouse
+            tooltip
+            .style("top", (event.pageY - 10) + "px")
+            .style("left", (event.pageX + 10) + "px");
+        })
+        .on("mouseout", function() {        // Change color back once mouse is moved away
+            d3.select(this).attr("fill", "black");
+            tooltip.style("visibility", "hidden");
+        })
 });
