@@ -17,7 +17,7 @@ d3.csv("cleaned_data.csv").then(data => { //promise controls the flow, get the d
         .attr("viewBox", [0, 0, width, height]); // for resizing element in browser
 
     let x = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.Percentage)]).nice() //we've flipped the axes to horizontal
+        .domain([0, 100]).nice() //we've flipped the axes to horizontal
         .range([margin.left, width - margin.right]);
     
     let y = d3.scaleBand()
@@ -42,20 +42,20 @@ d3.csv("cleaned_data.csv").then(data => { //promise controls the flow, get the d
     bar.append("rect") // add rect to bar group
         .attr("fill", "steelblue")
         .attr("x", margin.left)
-        .attr("width", d => x(d.Percentage))
+        .attr("width", d => x(d.Percentage) - x(0))
         .attr("y", d => y(d.NameState))
         .attr("height", y.bandwidth());
     
     bar.append('text') // add labels
         .text(d => d.Total)
-        .attr('x', d => margin.left + x(d.Percentage) + 20)
+        .attr('x', d => margin.left + x(d.Percentage) - x(0) + 20)
         .attr('y', d => y(d.NameState) + (y.bandwidth()/2))
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
+        .attr('style', "font-size: 10px")
         .style('fill', 'black');
 
     svg.append("text") //text outside the bar
-    .attr('font-size', 5)
     .attr("class", "x-label")
     .attr("text-anchor", "end")
     .attr('x', width - margin.right)
