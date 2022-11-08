@@ -52,7 +52,7 @@ d3.csv("cleaned_data.csv").then(data => { //promise controls the flow, get the d
         .attr('y', d => y(d.NameState) + (y.bandwidth()/2))
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
-        .attr('style', "font-size: 10px")
+        .attr('style', "font-size: 10px") 
         .style('fill', 'black');
 
     svg.append("text") //text outside the bar
