@@ -102,9 +102,12 @@ d3.csv('trains_europe.csv').then(data => {
             .attr("fill", "black")          // HOW TO BRING IT OUT IN FRONT?
             .attr("opacity", 0.75);
 
-            tooltip
-            .style("visibility", "visible")                 // ADD THE 1'000 SEPARATOR FOR PKM?
-            .html(`${d.country} in ${d.year}:<br>Total Pkm: ${d.passenger_km * 1000} M<br>Population: ${(Math.round(d.population / 10000, 2) / 100).toFixed(2)} M`);
+            tooltip             // Call function that updates table, remove tooltip
+            .style("visibility", "visible")                 // ADD THE 1'000 SEPARATOR FOR PKM? D3 format
+            .html(
+                `${d.country} in ${d.year}:
+Total Pkm: ${d3.format(",.0f")(d.passenger_km * 1000)} M
+Population: ${d3.format(",.2f")(d.population / 1000000, 2)} M`)
         })
         .on("mousemove", function (event) {
             tooltip

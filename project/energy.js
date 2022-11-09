@@ -18,7 +18,7 @@ d3.csv("trains_switzerland.csv").then(data => {
         d.passenger_km = +d.passenger_km
         d.total_passenger_energy_consumption = +d.total_passenger_energy_consumption;
     }
-    console.log(data)
+    console.log(data)           // DELETE
 
     let x = d3.scaleBand()
         .domain(data.map(d => d.year))
@@ -29,8 +29,7 @@ d3.csv("trains_switzerland.csv").then(data => {
         .domain([0, d3.max(data, d => d.passenger_km)]).nice()
         .range([horizon, 0]);
 
-    const y_energy = d3
-        .scaleLinear()
+    const y_energy = d3.scaleLinear()
         .domain([0, d3.max(data, (d) => d.total_passenger_energy_consumption)])
         .range([horizon, height - margin.bottom]);
     
@@ -46,7 +45,6 @@ d3.csv("trains_switzerland.csv").then(data => {
         .attr("transform", `translate(${margin.left - 5},0)`)
         .call(d3.axisLeft(y_energy))
         
-
     svg.append("g")
         .call(xAxis);
     

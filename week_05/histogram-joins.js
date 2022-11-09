@@ -1,4 +1,4 @@
-Histogram & Joins
+// Histogram & Joins
 
 const height = 400,
     width = 600,
