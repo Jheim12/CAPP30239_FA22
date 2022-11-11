@@ -88,35 +88,22 @@ d3.csv("trains_switzerland.csv").then((data) => {
                 if (i === "total_passenger_energy_consumption") {
                     svg.append("g")
                         .call(yAxis_energy);
-                    
-                    bar.append("rect")
-                        .attr("fill", "blue")
-                        .attr("x", d => x(d.year))
-                        .attr("width", x.bandwidth())
-                        .attr("y", d => y_energy(0))
-                        .attr("height", d => y_energy(d.total_passenger_energy_consumption) - y_energy(0))
-                        // .transition()
-                        // .duration(750)
-                        // .attr("y", d => y(d.length))
-                        // .attr("height", d => height - margin.bottom - y(d.length));
                 } else if (i === "greenhouse_gas_per_passenger") {
                     svg.append("g")
                         .call(yAxis_gas);
-                    
-                    bar.append("rect")
-                        .attr("fill", "blue")
-                        .attr("x", d => x(d.year))
-                        .attr("width", x.bandwidth())
-                        .attr("y", d => y_energy(0))
-                        .attr("height", d => y_energy(d.greenhouse_gas_per_passenger) - y_energy(0))
-                        // .transition()
-                        // .duration(750)
-                        // .attr("y", d => y(d.length))
-                        // .attr("height", d => height - margin.bottom - y(d.length));
                 }
 
                 
-                    
+                bar.append("rect")
+                    .attr("fill", "blue")
+                    .attr("x", d => x(d.year))
+                    .attr("width", x.bandwidth())
+                    .attr("y", d => y_energy(0))
+                    .attr("height", d => y_energy(d.total_passenger_energy_consumption) - y_energy(0))
+                    // .transition()
+                    // .duration(750)
+                    // .attr("y", d => y(d.length))
+                    // .attr("height", d => height - margin.bottom - y(d.length));
                 
                 bar.append("text")
                     .text(d => d.passenger_km)

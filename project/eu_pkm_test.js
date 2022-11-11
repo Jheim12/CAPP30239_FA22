@@ -70,6 +70,61 @@ d3.csv('trains_europe.csv').then(data => {
         .x(d => x(d.year))
         .y(d => y(d.passenger_km_per_capita));
 
+
+    // Add invisible scatterplot with voronoid-----------------------------------------------
+    let dots = svg.append("g")
+        .selectAll("g")
+        .data(data)
+        .join('g');
+
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "svg-tooltip")
+        .style("position", "absolute")
+        .style("visibility", "hidden");
+
+    dots.append("path")
+        .attr("d", d3.symbol().type(d3.symbolCross).size(50))
+        .attr("class", "star")
+        .attr("fill", "orange")
+        .attr("opacity", 0)     // Don't display when not on it
+        .attr("transform", d => `translate(${x(d.year)},${y(d.passenger_km_per_capita)}) rotate(-45)`);
+
+    const delaunay = d3.Delaunay.from(data, d => x(d.year), d => y(d.passenger_km_per_capita));
+    const voronoi = delaunay.voronoi([x.range()[0], y.range()[1], x.range()[1], y.range()[0]]);
+
+    dots.append("path")
+        .attr("d", (d, i) => voronoi.renderCell(i))
+        .attr("fill-opacity", 0)
+        // .attr("stroke", "black")         // Display the vornoid
+        .on("mouseover", function (event, d) {
+            d3.select(this.parentNode)      // DISPLAY NEXT TO THE CROSS RATHER THAN MOUSE
+            .select(".star")
+            .attr("fill", "black")          // HOW TO BRING IT OUT IN FRONT?
+            .attr("opacity", 0.75);
+
+            tooltip             // Call function that updates table, remove tooltip
+            .style("visibility", "visible")                 // ADD THE 1'000 SEPARATOR FOR PKM? D3 format
+            .html(
+                `${d.country} in ${d.year}:
+Total Pkm: ${d3.format(",.0f")(d.passenger_km * 1000)} M
+Population: ${d3.format(",.2f")(d.population / 1000000, 2)} M`)
+        })
+        .on("mousemove", function (event) {
+            tooltip
+            .style("top", (event.pageY - 10) + "px")
+            .style("left", (event.pageX + 10) + "px");
+        })
+        .on("mouseout", function () {
+            d3.select(this.parentNode)
+            .select(".star")
+            .attr("fill", "orange")
+            .attr("opacity", 0);
+        
+            tooltip.style("visibility", "hidden");
+        });
+
+
+    // Add lines----------------------------------------------------------------------
     for (let country of countries) {
         let countryData = data.filter(d => d.country === country);
     
@@ -125,44 +180,4 @@ d3.csv('trains_europe.csv').then(data => {
         }
     }
 
-
-
-
-
-    // Add invisible scatterplot-----------------------------------------------
-
-    // Adding the scatterplot
-    svg.append("g")
-        .attr("fill", "black")
-        .selectAll("circle")
-        .data(data)
-        .join("circle")
-        .attr("cx", d => x(d.year))
-        .attr("cy", d => y(d.passenger_km_per_capita))
-        .attr("r", 2)
-        .attr("opacity", 0.75);
-
-    // Define the tooltip
-    const tooltip = d3.select("body").append("div")
-        .attr("class", "svg-tooltip")
-        .style("position", "absolute")
-        .style("visibility", "hidden");
-
-    // Information to display
-    d3.selectAll("circle")
-        .on("mouseover", function(event, d) {
-            d3.select(this).attr("fill", "red");
-            tooltip
-            .style("visibility", "visible")                 // ADD THE 1'000 SEPARATOR FOR PKM?
-            .html(`${d.country} in ${d.year}:<br>Total Pkm: ${d.passenger_km * 1000} M<br>Population: ${(Math.round(d.population / 10000, 2) / 100).toFixed(2)} M`);
-        })
-        .on("mousemove", function(event) {      // Put text to the mouse
-            tooltip
-            .style("top", (event.pageY - 10) + "px")
-            .style("left", (event.pageX + 10) + "px");
-        })
-        .on("mouseout", function() {        // Change color back once mouse is moved away
-            d3.select(this).attr("fill", "black");
-            tooltip.style("visibility", "hidden");
-        })
 });

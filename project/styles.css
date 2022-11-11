@@ -24,6 +24,7 @@ text {
 .highlight text {
     fill: steelblue;
     opacity: 1;
+    font-size: 10px
 }
 
 .svg-tooltip {
@@ -51,3 +52,70 @@ line {
     stroke: #ddd;
     stroke-dasharray: 2;
 } */
+
+
+/*
+The switch - the box around the slider 
+Source: https://www.w3schools.com/howto/howto_css_switch.asp
+*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 8.5px;
+    width: 8.5px;
+    left: 1.3px;
+    bottom: 1.3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(8.6px);
+    -ms-transform: translateX(8.6px);
+    transform: translateX(8.6px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
