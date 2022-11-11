@@ -128,14 +128,14 @@ d3.csv("trains_switzerland.csv").then(data => {
             bar.selectAll("path")
                 .transition()
                 .duration(400)
-                .attr("y", d => y_energy_pc(d.energy_consumption_per_passenger))        // MAKE LINE GO TO Y
+                // .attr("y", d => y_energy_pc(d.energy_consumption_per_passenger))        // MAKE LINE GO TO Y
                 .style("opacity", 1)            
         } else {
             bar.selectAll("path")
                 .transition()
                 .duration(400)
-                .attr("y", horizon)
-                .style("opacity", 0)      // MAKE LINE COME OUT OF THE ORIGIN	
+                // .attr("y", horizon)      // MAKE LINE COME OUT OF THE ORIGIN
+                .style("opacity", 0)	
         }
     }
 });
