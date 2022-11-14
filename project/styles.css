@@ -119,3 +119,11 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+#map_legend {
+    margin-top: 50px
+}
+
+#map_legend svg {
+    margin: 0 auto;
+}

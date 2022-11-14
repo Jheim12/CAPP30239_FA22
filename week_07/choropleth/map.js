@@ -31,6 +31,7 @@ Promise.all([
     .range(d3.schemeBlues[9]);
 
   const path = d3.geoPath();
+  console.log(color)
 
   d3.select("#legend")
     .node()
