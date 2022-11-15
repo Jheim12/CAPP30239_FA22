@@ -19,13 +19,13 @@ const height = 300,
     width = 500;
 
 // Define the svg
-const svg = d3.select("#eu_pkm_test")
+const svg = d3.select("#eu_rkm")
     .append("svg")
     .attr("viewBox", [0, 0, width, height]);
 
 Promise.all([
     d3.csv("infrastructure_europe.csv"),
-    d3.json("eu_shapes.json")
+    d3.json("eu_shapes2.json")
     ]).then(([data, shapes]) => {
 
     const dataByCountry = {};
@@ -78,7 +78,8 @@ Promise.all([
         console.log(info)
         tooltip
             .style("visibility", "visible")
-            .html(`<b>${info && info.country}</b>
+            // .html(`<b>${info && info.country}</b>            // RESTORE
+            .html(`<b>${d.properties.geounit}</b>
 Total Rkm: ${d3.format(",.0f")(info && info.route_km)}
 km<sup>2</sup>: ${d3.format(",.0f")(info && info.size)}
 Rkm per 1k km<sup>2</sup>: ${d3.format(",.2f")(info && info.route_km_per_size)}`)
