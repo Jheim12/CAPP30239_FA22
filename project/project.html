@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHANGE THE PROJECT TITLE</title>
+    <title>Railroads and Demand Fluctuations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,39 +13,44 @@
             Do Railroads Need to Become more Flexible to Demand?
         </h1>
         
+        <!-- Rail Infrastructure Choropleth -->
         <p>
-            Rail-km around europe
+            <center><b>Rail Infrastructure Across Europe</b></center>
         </p>
         <div id="eu_rkm"></div>
         <div id="map_legend"></div>
-
-        <div id="eu_pkm_test"></div>
         <p>
-            However, despite the drop in passenger km, the energy consumption remained virtually unchanged. <br>
-            Per-capita?
+            Source: The World Bank Data (2022), World Bank Group, Washington, D.C. (US)
+            <ul>
+                <li><a href="https://data.worldbank.org/indicator/IS.RRS.TOTL.KM">rail-km</a></li>
+                <li><a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2">country size</a></li>
+            </ul>
+        </p>
+
+        <!-- Passenger-Km Line Chart -->
+        <div id="eu_pkm"></div>
+        <p>
+            Source: Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR)
+            <ul>
+                <li><a href="https://www.irg-rail.eu/irg/documents/market-monitoring">passenger-km</a></li>
+                <li><a href="https://data.worldbank.org/indicator/SP.POP.TOTL">population (World Bank)</a></li>
+            </ul>
+        </p>
+
+        <!-- Energy Bar Chart -->
+        <div id="energy"></div>
+        <p>
+            Per Pkm?
             <label class="switch">
                 <input type="checkbox", id="energy_checkbox">
                 <span class="slider round"></span>
-            </label>
-        </p>
-        <div id="energy"></div>
-        <p>
-            Swiss are train-fanatics <br>
-            Bring axis in front <br>
-            Bring crosses to the front <br>
-            Anchor tooltip <br>
-        </p>
-        <p>
-            However, offer is inelastic
+            </label><br>
+            Source: Swiss National Railway Company, Statistics Portal (though custom request had to be made), Bern (CH)
+            <ul>
+                <li><a href="https://reporting.sbb.ch/en/home?sv_lang=3&sv_lang_change=true">SBB</a></li>
+            </ul>
         </p>
         
-        <p>
-            Sustainability test
-            <select>
-                <option value="total_passenger_energy_consumption">Energy Consumption</option>
-                <option value="greenhouse_gas_per_passenger">Greenhouse Gas Emissions</option>
-            </select>
-        </p>
     </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
