@@ -4,7 +4,7 @@
 function Legend(color, {
     title,
     tickSize = 6,
-    width = 320, 
+    width = 640, 
     height = 44 + tickSize,
     marginTop = 18,
     marginRight = 0,
