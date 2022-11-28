@@ -1,5 +1,8 @@
 // Add annotation pointing to Switzerland?
 // Circle/Highlight the border of Switzerland?
+// Colors that fade into the background?
+
+// Leave titles outside of svg
 
 // Define tooltip
 const tooltip = d3.select("body")
@@ -51,13 +54,13 @@ Promise.all([
     const projection = d3
         .geoIdentity()
         .reflectY(true)
-        .fitSize([width, height], countries);
+        .fitSize([width, height], countries);  // minus margin + translate and transform by the margin
     
-    // // Background
-    // svg.append('rect')
-    //     .attr('width', width)
-    //     .attr('height', height)
-    //     .attr('fill', '#AAB3D3')
+    // Background
+    svg.append('rect')
+        .attr('width', width)
+        .attr('height', height)
+        .attr('fill', '#AAB3D3')
 
     // Define the path
     const path = d3.geoPath(projection);
@@ -85,6 +88,16 @@ Promise.all([
         .data(countries.features)
         .join("path")
         .attr("fill", d => {return (d.properties.geounit in dataByCountry) ? color(dataByCountry[d.properties.geounit].route_km_per_size) : '#979797';})
+        .attr("stroke", d => {if (d.properties.geounit == "Switzerland") {
+            return "red"
+        } else {
+            return "black"
+        }})
+        .attr("stroke-width", d => {if (d.properties.geounit == "Switzerland") {
+            return 1
+        } else {
+            return 0.5
+        }})
         .attr("d", path)
 
         // Tooltip
