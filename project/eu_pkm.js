@@ -54,14 +54,14 @@ d3.csv('trains_europe.csv').then(data => {
                 .attr("x", x(lastEntry.year) + 3)
                 .attr("y", y(lastEntry.passenger_km_per_capita))
                 .attr("dominant-baseline", "middle")
-                .attr("fill", "red")
+                .attr("fill", "#FF1212")
                 .attr("font-weight", 700);
             
             // Add line
             g.append("path")
                 .datum(countryData)
                 .attr("fill", "none")
-                .attr("stroke", "red")
+                .attr("stroke", "#FF1212")
                 .attr("d", line)
                 .attr("stroke-width", 3)
         } else {

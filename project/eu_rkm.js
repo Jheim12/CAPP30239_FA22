@@ -44,9 +44,6 @@ Promise.all([
     // Define the color palette
     const color = d3.scaleQuantize()
         .domain([0, 100]).nice()
-        // .range(d3.schemePRGn[10]);
-        // .range(['#08306b', '#1c6aaf', '#59a1cf', '#abcfe6', '#e1edf8',
-        // '#fee0d3', '#fca082', '#f5553d', '#c2181c', '#67000d'])
         .range(["#e3eef9", "#cfe1f2", "#b5d4e9", "#93c3df", "#6daed5",
         "#4b97c9", "#2f7ebc", "#1864aa", "#0a4a90", "#08306b"])
     
@@ -56,12 +53,6 @@ Promise.all([
         .reflectY(true)
         .fitSize([width, height], countries);  // minus margin + translate and transform by the margin
     
-    // // Background
-    // svg.append('rect')
-    //     .attr('width', width)
-    //     .attr('height', height)
-    //     .attr('fill', '#AAB3D3')
-
     // Define the path
     const path = d3.geoPath(projection);
 
@@ -73,9 +64,6 @@ Promise.all([
         d3.scaleOrdinal(
             ['0-10', '10-20', '20-30', '30-40', '40-50',
             '50-60', '60-70', '70-80', '80-90', '90-100+'],
-            // d3.schemePRGn[10]
-            // (['#08306b', '#1c6aaf', '#59a1cf', '#abcfe6', '#e1edf8',
-            // '#fee0d3', '#fca082', '#f5553d', '#c2181c', '#67000d'])
             (["#e3eef9", "#cfe1f2", "#b5d4e9", "#93c3df", "#6daed5",
             "#4b97c9", "#2f7ebc", "#1864aa", "#0a4a90", "#08306b"])
         ),
@@ -89,7 +77,7 @@ Promise.all([
         .join("path")
         .attr("fill", d => {return (d.properties.geounit in dataByCountry) ? color(dataByCountry[d.properties.geounit].route_km_per_size) : '#979797';})
         .attr("stroke", d => {if (d.properties.geounit == "Switzerland") {
-            return "red"
+            return "#FF1212"
         } else {
             return "black"
         }})
@@ -119,7 +107,7 @@ Rkm per 1k km<sup>2</sup>: ${d3.format(",.2f")(info && info.route_km_per_size)}`
             .html(message)
             .style("top", (event.pageY - 10) + "px")
             .style("left", (event.pageX + 10) + "px");
-        d3.select(this).attr("fill", "red");
+        d3.select(this).attr("fill", "#FF1212");
         })
         .on("mouseout", function () {
         tooltip.style("visibility", "hidden");
@@ -135,7 +123,7 @@ Rkm per 1k km<sup>2</sup>: ${d3.format(",.2f")(info && info.route_km_per_size)}`
             wrap: 150,  // try something smaller to see text split in several lines
             padding: 0   // More = text lower
             },
-            color: ["red"],
+            color: ["#FF1212"],
             x: 163,
             y: 195,
             dy: -130,

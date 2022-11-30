@@ -10,91 +10,100 @@
 <body>
     <div id="container">
         <h1>
-            Do Railroads Need to Become more Flexible to Demand?
+            Flexible Schedules: The Innovation Railroads Need?
         </h1>
 
         <h3>
-            What are Flexible Schedules?
+            Infrastructure and Operations
         </h3>
         <p>
-            Flexible schedules enabled by AI could have a large potential
-            (reduce emissions, save taxpayer money, etc.). <br>
-            However, emphasis in on infrastructure with the latest schedule innovation being three decades old. (Gotthard, FV dosto (some of which are a disaster)) <br>
-            Therefore, it is worth taking a look at this cheap and fast to implement source of innovation.
-            Let's take a look at why infrastructure alone is not all that great.
+            The Japanese Shinkansen or the French TGV are known for their impressive feats of engineering that built an infrastructure in which trains can travel so fast that they are serious rivals to the airline industry. By its nature, railroads require good infrastructure to function efficiently and offer good service to their passengers. Therefore, it is unsurprising that countries like Switzerland, which is known for having one of the world’s best railway networks, heavily invest in the physical components required for rail transportation. For instance, the Swiss did just complete the longest rail tunnel in the world, the Gotthard Base Tunnel, and purchased a new fleet of rolling stock with innovative roll compensation technology to increase curve speed.
+        </p><p>
+            However, those infrastructure projects are expensive and take a long time to complete. For instance, the Gotthard Base Tunnel took 70 years of work, 17 of actual construction, and cost CHF12.2 billion (1). Still, it is a massive success as it creates a high-speed connection through the Alps, effectively merging the North and South of Europe. Time and investment, however, do not guarantee success which was illustrated by the new fleet of rolling stock which cost CHF1.9 billion and suffered long delivery delays (2). The roll compensation technology will never work as intended meaning that higher curve speeds will not be achieved (3).
+        </p><p>
+            Luckily, while infrastructure is one major part of determining the success of a railroad network, its operation is just as important since consumers highly regard punctuality and reliability. This means that operations are the second axis of innovation in addition to infrastructure. Probably the most important operational aspect of railroading is scheduling. However, trains have always run on fixed schedules and the last innovation, Precision Scheduled Railroading, took place three decades ago. Despite it being very successful, one likely never heard of it because it only concerned freight traffic (4).
+        </p><p>
+            Therefore, one is allowed to ask whether passenger schedules have to be fixed. What if we could leverage today’s advances in artificial intelligence to predict passenger demand and adjust the number of trains running on a given route accordingly? This has the potential of being an innovation that is cheap and fast to implement when compared to infrastructure projects.
         </p>
 
         <h3>
-            Infrastructure isn't King of Currywurst
+            Europe's Infrastructure Status Quo
         </h3>
         <p>
-            Infrastructure in Germany is better than in Switzerland. <br>
-            However, it is perceived as worse because of delays (operations). <br>
-            Therefore, if you don't know how to run trains, infrastructure won't save you.
+            Before exploring the possible benefits of flexible schedules, we must focus on infrastructure one last time. Railroad infrastructure encompasses many different structures from the rolling stock and tracks to hydroelectric plants and stations. However, the state of a country’s rail infrastructure can be proxied by the rail kilometers (Rkm) adjusted by the size of the country. As one can see, the rail infrastructure across Europe varies drastically with central Europe. While the countries of central Europe have the densest networks, others lag behind.
         </p>
         <!-- Rail Infrastructure Choropleth -->
-        <p>
-            <center><b>Rail Infrastructure Across Europe</b></center>
+        <p id="chart-title">
+            Rail Infrastructure Across Europe
         </p>
         <div id="eu_rkm"></div>
         <div id="map_legend"></div>
+        <p id="source">
+            Source: The World Bank Data (2022), World Bank Group, Washington, D.C. (US) (<a href="https://data.worldbank.org/indicator/IS.RRS.TOTL.KM">rail-km</a>, <a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2">country size</a>)
+
+        </p>
         <p>
-            Source: The World Bank Data (2022), World Bank Group, Washington, D.C. (US)
-            <ul>
-                <li><a href="https://data.worldbank.org/indicator/IS.RRS.TOTL.KM">rail-km</a></li>
-                <li><a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2">country size</a></li>
-            </ul>
+            Interestingly, Germany’s railroad performance is generally regarded as worse than Switzerland’s (5) despite having seemingly better infrastructure. This can mostly be traced back to operations as Germany’s trains are performing much worse when it comes to delays for instance. In fact, in Germany, only 66% of long-distance trains arrive within 5 minutes of their scheduled time (6) while 91% of their Swiss equivalent get to their destination with a delay of fewer than 3 minutes (7). This confirms that infrastructure is necessary to running a successful railroad but not sufficient on its own. Having as many trains and tracks as possible won’t help a company if it doesn’t know how to run them efficiently. This is why operations, in other words scheduling, is so important, which leaves means that flexible schedules have a major impact on the overall performance of railway networks.
         </p>
 
         <h3>
-            An Economist's Perspective
+            Economist’s Point of View
         </h3>
         <p>
-            Economist would quantify the demand for rail transport services with Pkm.
-            Switzerland is an outlier, which confirms the good infrastructure and operations. <br>
-            However, all countries suffered during diminishing demand during the pandemic. <br>
-            Therefore, the economist would expect a lower offer, meaning lower Tkm.
+            To truly understand the potential of flexible schedules, one needs to analyze the current situation like an economist. Using Adam Smith’s most basic model, the one of offer and demand, this is relatively easy. Demand is of course determined by the passengers and how much they travel. With regards to railroading, this is best summarized by the passenger kilometers (Pkm) but to compare countries, one needs to adjust these values by the population to get the kilometers traveled per person.
+        </p><p>
+            The chart shows that Switzerland is atop all European countries by a large margin. This is unsurprising because, as discussed, it excels in operations compared to its neighbors whilst having good (but not the best) infrastructure. This, once again, confirms that infrastructure is not everything but that operations play an important role.
         </p>
         <!-- Passenger-Km Line Chart -->
-        <p>
-            <center><b>Demand for Railroad Services in Europe</b></center>
+        <p id="chart-title">
+            Demand for Railroad Services in Europe
         </p>
         <div id="eu_pkm"></div>
+        <p id="source">
+            Sources: <br>
+            Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR) (<a href="https://www.irg-rail.eu/irg/documents/market-monitoring">passenger-km</a>) <br>
+            The World Bank Data (2022), World Bank Group, Washington, D.C. (US) (<a href="https://data.worldbank.org/indicator/SP.POP.TOTL">population</a>)
+        </p>
         <p>
-            Source: Rail Strategy Report (2017-2021), Independent Regulator's Group - Rail, Zagreb (HR)
-            <ul>
-                <li><a href="https://www.irg-rail.eu/irg/documents/market-monitoring">passenger-km</a></li>
-                <li><a href="https://data.worldbank.org/indicator/SP.POP.TOTL">population (World Bank)</a></li>
-            </ul>
+            However, having much higher ridership than the other countries, Switzerland was affected just as much by the pandemic in which the Pkm per capita dropped for every country. Logically, an economist would see this as a drop in demand and would expect that the railway companies lower their offer to re-establish the equilibrium between offer and demand.
+        </p><p>
+            Reducing the offer, logically, cannot come from infrastructure as it is, by its nature, fixed in the short term and decommissioning some structures makes little sense. Operations, however, can be adapted relatively fast and if schedules were flexible, this task would become very easy.
+        </p><p>
+            Of course, pandemics are infrequent, but similar changes in demand also happen at a much lower scale. For instance, demand for routes to skiing resorts depends heavily on the snowfall. Hence, if more snow is anticipated, flexible schedules would allow more trains to run to accommodate demand.
         </p>
 
         <h3>
-            Did Adam Smith Prevail?
+            Why is the Economist’s Equilibrium Important?
         </h3>
         <p>
-            Tkm remained constant while Pkm plummeted.
-            Discussion on public good. <br>
-            However, that has poor consequences on environment and taxpayer money. <br>
-            Therefore, flexible schedules could be helpful if we sacrifice some long-term planning.
-            When the the pros of flexible schedules outweigh the cons?
-        </p>
-        <!-- Energy Bar Chart -->
-        <p>
-            <center><b>Offer Inflexibility of Rail Services</b></center>
-        </p>
-        <div id="energy"></div>
-        <p>
-            Enlighten me!
+            It is true that railroad transportation services are a public good as many of the railways are (at least partially) nationalized in Europe. Thus, in exchange for their taxes, the inhabitants have a right to frequent service even if they live on a route with low ridership. This is one of the main arguments against flexible schedules as it could and likely would negatively affect rural communities that rely on this service.
+        </p><p>
+            However, the consequences of not using flexible schedules also have to be taken into account. Those consequences can be reflected as costs, noise, but also in the environment. Looking back at the pandemic, we can see that ridership in Switzerland decreased by 41% between 2019 and 2020 while energy consumption did not change significantly.
+        </p><p>
+            Now, did the energy consumption constant despite efforts of tailoring the offer to the demand to get back to the economists’ much-loved equilibrium? Flip the switch to find out!
             <label class="switch">
                 <input type="checkbox", id="energy_checkbox">
                 <span class="slider round"></span>
             </label><br>
-            Source: Swiss National Railway Company, Statistics Portal (though custom request had to be made), Bern (CH)
-            <ul>
-                <li><a href="https://reporting.sbb.ch/en/home?sv_lang=3&sv_lang_change=true">passenger-km and energy consumption</a></li>
-            </ul>
         </p>
-        
+        <!-- Energy Bar Chart -->
+        <p id="chart-title">
+            Offer Inflexibility of Rail Services in Switzerland
+        </p>
+        <div id="energy"></div>
+        <p id="source">
+            Source: Swiss National Railway Company, Statistics Portal, Bern (CH) (<a href="https://reporting.sbb.ch/en/home?sv_lang=3&sv_lang_change=true">upon custom request</a>)
+        </p>
+        <p>
+            Indeed, the offer remained constant since the national railway company did not reduce the number of kilometers covered by its trains (Tkm). This creates a significant gap between the offer and demand highlighted by the red rectangle.
+        </p><p>
+            Not only does this negatively affect profitability, but it means that an opportunity to save energy was not used as the energy consumption per Pkm increased drastically. Especially with the energy crisis Europe is facing, this is a matter of serious concern.
+        </p><p>
+            With flexible schedules, this issue could have potentially been fixed as the gap between offer and demand would not exist. Fewer trains would have circulated on the network (but enough to guarantee the coverage of basic needs) which would logically lead to significantly lower energy consumption.
+        </p><p>
+            Yet, no railway company has implemented flexible schedules at a large scale, which means that their impact can not be quantified at this point since there is no counterfactual. However, this case shows the immense potential they have and should, at the very least, spark some debate within the railroading industry. Afterall, it would be a shame to dig tunnels and have the most innovative rollingstock but still fail to use them effectively.
+        </p>
+
     </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
@@ -102,6 +111,6 @@
         <script src="color_legend.js" ></script>
         <script src="eu_rkm.js"></script>
         <script src="eu_pkm.js"></script>
-        <script src="energy2.js"></script>
+        <script src="energy.js"></script>
 </body>
 </html>
