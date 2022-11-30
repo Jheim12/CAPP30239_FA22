@@ -2,7 +2,7 @@ d3.csv("trains_switzerland.csv").then(data => {
     // Basic Setup
     const height = 500,
         width = 800,
-        margin = ({top: 10, right: 80, bottom: 35, left: 70}),
+        margin = ({top: 10, right: 80, bottom: 35, left: 80}),
         horizon = - margin.top + height/2;
     
     // Define SVG

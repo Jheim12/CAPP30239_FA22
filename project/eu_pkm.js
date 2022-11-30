@@ -2,7 +2,7 @@ d3.csv('trains_europe.csv').then(data => {
     // Chart sizes
     const height = 500,
         width = 800,
-        margin = ({ top: 10, right: 80, bottom: 35, left: 70 })
+        margin = ({top: 10, right: 80, bottom: 35, left: 80})
         innerWidth = width - margin.left - margin.right;
     
     // Define the svg

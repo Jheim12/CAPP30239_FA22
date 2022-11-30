@@ -45,13 +45,13 @@ text {
 }
 
 .highlight path {
-    stroke: #08306b;
+    stroke: #0a4a90;
     opacity: 1;
     stroke-width: 2;
 }
 
 .highlight text {
-    fill: #08306b;
+    fill: #0a4a90;
     opacity: 1;
     font-size: 10px
 }

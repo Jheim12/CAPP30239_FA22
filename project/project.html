@@ -19,9 +19,9 @@
         <p>
             The Japanese Shinkansen or the French TGV are known for their impressive feats of engineering that built an infrastructure in which trains can travel so fast that they are serious rivals to the airline industry. By its nature, railroads require good infrastructure to function efficiently and offer good service to their passengers. Therefore, it is unsurprising that countries like Switzerland, which is known for having one of the world’s best railway networks, heavily invest in the physical components required for rail transportation. For instance, the Swiss did just complete the longest rail tunnel in the world, the Gotthard Base Tunnel, and purchased a new fleet of rolling stock with innovative roll compensation technology to increase curve speed.
         </p><p>
-            However, those infrastructure projects are expensive and take a long time to complete. For instance, the Gotthard Base Tunnel took 70 years of work, 17 of actual construction, and cost CHF12.2 billion (1). Still, it is a massive success as it creates a high-speed connection through the Alps, effectively merging the North and South of Europe. Time and investment, however, do not guarantee success which was illustrated by the new fleet of rolling stock which cost CHF1.9 billion and suffered long delivery delays (2). The roll compensation technology will never work as intended meaning that higher curve speeds will not be achieved (3).
+            However, those infrastructure projects are expensive and take a long time to complete. For instance, the Gotthard Base Tunnel took 70 years of work, 17 of actual construction, and cost CHF12.2 billion<sup><a href="#refs">(1)</a></sup>. Still, it is a massive success as it creates a high-speed connection through the Alps, effectively merging the North and South of Europe. Time and investment, however, do not guarantee success which was illustrated by the new fleet of rolling stock which cost CHF1.9 billion and suffered long delivery delays<sup><a href="#refs">(2)</a></sup>. The roll compensation technology will never work as intended meaning that higher curve speeds will not be achieved<sup><a href="#refs">(3)</a></sup>.
         </p><p>
-            Luckily, while infrastructure is one major part of determining the success of a railroad network, its operation is just as important since consumers highly regard punctuality and reliability. This means that operations are the second axis of innovation in addition to infrastructure. Probably the most important operational aspect of railroading is scheduling. However, trains have always run on fixed schedules and the last innovation, Precision Scheduled Railroading, took place three decades ago. Despite it being very successful, one likely never heard of it because it only concerned freight traffic (4).
+            Luckily, while infrastructure is one major part of determining the success of a railroad network, its operation is just as important since consumers highly regard punctuality and reliability. This means that operations are the second axis of innovation in addition to infrastructure. Probably the most important operational aspect of railroading is scheduling. However, trains have always run on fixed schedules and the last innovation, Precision Scheduled Railroading, took place three decades ago. Despite it being very successful, one likely never heard of it because it only concerned freight traffic<sup><a href="#refs">(4)</a></sup>.
         </p><p>
             Therefore, one is allowed to ask whether passenger schedules have to be fixed. What if we could leverage today’s advances in artificial intelligence to predict passenger demand and adjust the number of trains running on a given route accordingly? This has the potential of being an innovation that is cheap and fast to implement when compared to infrastructure projects.
         </p>
@@ -34,7 +34,7 @@
         </p>
         <!-- Rail Infrastructure Choropleth -->
         <p id="chart-title">
-            Rail Infrastructure Across Europe
+            Rail Infrastructure Across Europe in 2019
         </p>
         <div id="eu_rkm"></div>
         <div id="map_legend"></div>
@@ -43,7 +43,7 @@
 
         </p>
         <p>
-            Interestingly, Germany’s railroad performance is generally regarded as worse than Switzerland’s (5) despite having seemingly better infrastructure. This can mostly be traced back to operations as Germany’s trains are performing much worse when it comes to delays for instance. In fact, in Germany, only 66% of long-distance trains arrive within 5 minutes of their scheduled time (6) while 91% of their Swiss equivalent get to their destination with a delay of fewer than 3 minutes (7). This confirms that infrastructure is necessary to running a successful railroad but not sufficient on its own. Having as many trains and tracks as possible won’t help a company if it doesn’t know how to run them efficiently. This is why operations, in other words scheduling, is so important, which leaves means that flexible schedules have a major impact on the overall performance of railway networks.
+            Interestingly, Germany’s railroad performance is generally regarded as worse than Switzerland’s<sup><a href="#refs">(5)</a></sup> despite having seemingly better infrastructure. This can mostly be traced back to operations as Germany’s trains are performing much worse when it comes to delays for instance. In fact, in Germany, only 66% of long-distance trains arrive within 5 minutes of their scheduled time<sup><a href="#refs">(6)</a></sup> while 91% of their Swiss equivalent get to their destination with a delay of fewer than 3 minutes<sup><a href="#refs">(7)</a></sup>. This confirms that infrastructure is necessary to running a successful railroad but not sufficient on its own. Having as many trains and tracks as possible won’t help a company if it doesn’t know how to run them efficiently. This is why operations, in other words scheduling, is so important, which leaves means that flexible schedules have a major impact on the overall performance of railway networks.
         </p>
 
         <h3>
@@ -80,7 +80,7 @@
         </p><p>
             However, the consequences of not using flexible schedules also have to be taken into account. Those consequences can be reflected as costs, noise, but also in the environment. Looking back at the pandemic, we can see that ridership in Switzerland decreased by 41% between 2019 and 2020 while energy consumption did not change significantly.
         </p><p>
-            Now, did the energy consumption constant despite efforts of tailoring the offer to the demand to get back to the economists’ much-loved equilibrium? Flip the switch to find out!
+            Now, were effort to tailoring the offer to the demand made in order to get back to the economists’ much-loved equilibrium? Flip the switch to find out!
             <label class="switch">
                 <input type="checkbox", id="energy_checkbox">
                 <span class="slider round"></span>
@@ -104,6 +104,37 @@
             Yet, no railway company has implemented flexible schedules at a large scale, which means that their impact can not be quantified at this point since there is no counterfactual. However, this case shows the immense potential they have and should, at the very least, spark some debate within the railroading industry. Afterall, it would be a shame to dig tunnels and have the most innovative rollingstock but still fail to use them effectively.
         </p>
 
+        <h3>Process</h3>
+        <p>
+            My goal was to analyze the environmental impact of Railroading in Switzerland, with a focus on how it varied during the pandemic and how it compares to its European neighbors. <br>
+        </p><p>
+            First, I had to find the data I wanted, which was fairly easy as the World Bank and the Swiss National Railway Company have some high-quality data on the topic of interest. The only slight difficulty I faced during the data-gathering process was that I had to aggregate the data for the line chart from yearly reports. However, this was more time-consuming than technically difficult. <br>
+        </p><p>
+            Once I had the data, I realized that it was clean but had some missing values. Luckily, the latter would not be an issue as I was restricting my analysis to the recent years which had good coverage. <br>
+        </p><p>
+            Deciding on the charts was a little more difficult. A choropleth seemed well-suited to show the variance in infrastructure across Europe because it displays well the way certain regions of the continent have denser infrastructure than others. Additionally, it allows the reader, with a little annotation and highlighting, to understand that Switzerland does not have the densest infrastructure which is the second important takeaway of the visualization. Finally, a tooltip allows the curious reader to explore the raw data behind the choropleth itself. <br>
+        </p><p>
+            The second chart was the easiest one to choose because, while exploring the data with some line charts, this one particularly stood out with Switzerland as the outlier which fit the narrative perfectly. Additionally, this chart, along with the prior, allows one to understand that good infrastructure is a necessary but not sufficient condition for an effective railroad network. I decided to use the greyscale to guide the attention to Switzerland as the reader does not need to focus on the other countries but I did use an interactive element to give them the option of exploring them. <br>
+        </p><p>
+            Finally, the last visualization is a mix of a bar chart and a line chart. I initially wanted to only use a mirrored bar chart with the Pkm on top and energy consumption on the bottom. This already allowed the reader to understand that there is a disparity between the ridership and the environmental impact during the covid pandemic. However, I found that essentially, I plotted the demand on the top half (Pkm) so it would be easy to add the offer (Tkm) and a small rectangle would visualize the excess offer perfectly. I placed another line on top of the bottom bars to show how much more energy is used per Pkm which should shock the readers. Finally, I made the lines and the annotation appear with a toggle to make the reader first analyze some data before showing them exactly how large the disparity is, which hopefully adds a little dramatic effect. <br>
+        </p><p>
+            For each of the three graphs, I made sure to use a consistent, accessible color scheme. Most of the information is on a blue scale while the parts I want to highlight are in red in an attempt to guide the reader to the important conclusions that can be found within each chart. <br>
+        </p><p>
+            To avoid the confirmation bias, I decided to make all of my charts before making a hard outline for the story. I had a general idea in mind, but, in retrospect, it was not precise or clear enough. This made the writing process a lot harder. My charts were showing interesting trends, and somewhat fitting the story but it was hard to piece it all together. I had to shift from my initial idea of discussing the environmental impact, which now only plays a minor role in the story, to raising awareness about an issue and suggesting flexible schedules as a potential solution to it. If I could start over again, I would spend more time figuring out the story and before moving on with creating the charts. Nevertheless, I am more than happy with the result and even more about the learning process.
+        </p>
+
+        <h3 id="refs">References</h3>
+        <p>
+            <ol type="1">
+                <li>Federal Department of Foreign Affairs, The New Rail Link Through the Alps (NRLA) Serving Europe, 2021, Bern (CH) (<a href="https://www.eda.admin.ch/aboutswitzerland/en/home/dossiers/bauwerk-im-dienste-europas.html">article</a>)</li>
+                <li>Swiss National Railway Company, FV-Dosto, 2022, Bern (CH) (<a href="https://company.sbb.ch/de/medien/dossier-medienschaffende/faktenblatt-fv-dosto.html">article</a>)</li>
+                <li>International Railway Journal, SBB to Abandon Roll Compensation Technology on FV-Dosto Fleet, 2022, Falmouth (EN) (<a href="https://www.railjournal.com/fleet/sbb-to-abandon-roll-compensation-technology-on-fv-dosto-fleet/">article</a>)</li>
+                <li>Union Pacific Railroad, What Is Precision Scheduled Railroading?, 2019, Omaha, NE (USA) (<a href="https://www.up.com/customers/track-record/tr091019-precision-scheduled-railroading.htm">article</a>)</li>
+                <li>Boston Consulting Group, The 2017 European Railway Performance Index, 2017, Paris (FR) (<a href="https://www.bcg.com/publications/2017/transportation-travel-tourism-2017-european-railway-performance-index">report</a>)</li>
+                <li>Deutsche Bahn, Die DB in Zahlen, 2022, Berlin (DE) (<a href="https://www.deutschebahn.com/de/konzern/konzernprofil/zahlen_fakten/puenktlichkeitswerte-6878476">data portal</a>)</li>
+                <li>Swiss National Railway Company, Statistics Portal, 2022, Bern (CH) (<a href="https://reporting.sbb.ch/punctuality">data portal</a>)</li>
+            </ol>
+        </p>
     </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
