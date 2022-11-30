@@ -2,8 +2,8 @@ d3.csv("trains_switzerland.csv").then(data => {
     // Basic Setup
     const height = 500,
         width = 800,
-        horizon = height/2,
-        margin = ({top: 50, right: 45, bottom: 35, left: 100});
+        margin = ({top: 10, right: 80, bottom: 35, left: 70}),
+        horizon = - margin.top + height/2;
     
     // Define SVG
     const svg = d3.select("#energy")
@@ -102,8 +102,8 @@ d3.csv("trains_switzerland.csv").then(data => {
     svg.append("text")
         .attr("class", "y-label")
         .attr("text-anchor", "middle")
-        .attr("x", -horizon/2)
-        .attr("y", margin.left - 50)
+        .attr("x", -(horizon + margin.top) /2)
+        .attr("y", 25)
         .attr("transform", "rotate(-90)")
         .text("Million Pkm")
         .style("font-size","15px");
@@ -123,7 +123,7 @@ d3.csv("trains_switzerland.csv").then(data => {
         .attr("class", "y-label")
         .attr("text-anchor", "middle")
         .attr("x", -(horizon + height - margin.bottom)/2)
-        .attr("y", margin.left - 50)
+        .attr("y", 25)
         .attr("transform", "rotate(-90)")
         .text("Total GWh")
         .style("font-size","15px");
@@ -162,14 +162,14 @@ d3.csv("trains_switzerland.csv").then(data => {
     
     // Add Numbers to the Rectangles
     bar.append("text")
-        .text(d => d.passenger_km)
+        .text(d => d3.format(",.2f")(d.passenger_km))
         .attr('x', d => x(d.year) + (x.bandwidth()/2))
         .attr('y', d => y_pkm(d.passenger_km) + 15)
         .attr('text-anchor', 'middle')
         .style('fill', 'white');   
 
     bar.append("text")
-        .text(d => d.total_passenger_energy_consumption)
+        .text(d => d3.format(",.2f")(d.total_passenger_energy_consumption))
         .attr('x', d => x(d.year) + (x.bandwidth()/2))
         .attr('y', d => y_energy(d.total_passenger_energy_consumption) - 15)
         .attr('text-anchor', 'middle')
@@ -201,13 +201,48 @@ d3.csv("trains_switzerland.csv").then(data => {
         .attr("stroke-width", 1)
         .style("opacity", 0);
 
+    // Add Annotation
+    bar.append("rect")
+        .attr("id", "annotation")
+        .attr("rx", 6)
+        .attr("ry", 6)
+        .attr("x", margin.left + 467)
+        .attr("y", margin.top + 30)
+        .attr("width", 174)
+        .attr("height", 45)
+        .attr("fill", "none")
+        .attr("stroke", 'red')
+        .style("opacity", 0)
+    
+    bar.append("text")
+        .attr("id", "annotation")
+        .attr("text-anchor", "middle")
+        .attr("x", margin.left + 553)
+        .attr("y", margin.top + 49)
+        .text("Drop in demand (Pkm) but")
+        .attr("fill", 'red')
+        .attr("dy", '0em')
+        .style("font-size","12px")
+        .style("opacity", 0);
+    
+    bar.append("text")
+        .attr("id", "annotation")
+        .attr("text-anchor", "middle")
+        .attr("x", margin.left + 553)
+        .attr("y", margin.top + 49)
+        .text("offer (Tkm) remains constant")
+        .attr("fill", 'red')
+        .attr("dy", '1.2em')
+        .style("font-size","12px")
+        .style("opacity", 0);
+
     // Toggle
     d3.select("#energy_checkbox").on("change", update);
     update();
 
     function update() {
         const switchChecked = d3.select("#energy_checkbox").property("checked");
-          
+
         const lineData_energy_pc = switchChecked
             ? data
             : Array.from(data, (d) => {
@@ -232,33 +267,33 @@ d3.csv("trains_switzerland.csv").then(data => {
             .attr("d", energy_pc_line(lineData_energy_pc))
             .style("opacity", switchChecked ? 1 : 0);
 
-        top_right_axis
-            .transition()
+        top_right_axis.transition()
             .duration(1000)
             .style("opacity", switchChecked ? 1 : 0);
 
-        bottom_right_axis
-            .transition()
+        bottom_right_axis.transition()
             .duration(1000)
             .style("opacity", switchChecked ? 1 : 0);
         
-        yRightTopLabel
-            .transition()
+        yRightTopLabel.transition()
             .duration(1000)
             .style("opacity", switchChecked ? 1 : 0);
         
-        yRightBottomLabel
-            .transition()
+        yRightBottomLabel.transition()
             .duration(1000)
             .style("opacity", switchChecked ? 1 : 0);
+    
+        if (switchChecked) {
+            bar.transition()
+                .delay(1000)
+                .duration(1000)
+                .selectAll("#annotation")
+                .style("opacity", switchChecked ? 1 : 0);
+        } else {
+            bar.transition()
+                .duration(1000)
+                .selectAll("#annotation")
+                .style("opacity", switchChecked ? 1 : 0);
+        }
     }
-
-    // Add title
-    svg.append("text")
-        .attr("class", "title")
-        .attr("text-anchor", "middle")
-        .attr("x", width/2)
-        .attr("y", margin.top - 20)
-        .text("Unproportional Energy Consumption 2")
-        .style("font-size","26px");
 });

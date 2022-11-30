@@ -2,7 +2,7 @@ d3.csv('trains_europe.csv').then(data => {
     // Chart sizes
     const height = 500,
         width = 800,
-        margin = ({ top: 40, right: 80, bottom: 35, left: 40 })
+        margin = ({ top: 10, right: 80, bottom: 35, left: 70 })
         innerWidth = width - margin.left - margin.right;
     
     // Define the svg
@@ -175,18 +175,8 @@ Population: ${d3.format(",.2f")(d.population / 1000000, 2)} M`)
         .attr("class", "y-label")
         .attr("text-anchor", "middle")
         .attr("x", -margin.top - (height -margin.bottom)/2)
-        .attr("y", 10)
+        .attr("y", 25)
         .attr("transform", "rotate(-90)")
         .text("Million km/10k inhabitants")
         .style("font-size","15px");
-    
-    // Add title
-    svg.append("text")
-        .attr("class", "title")
-        .attr("text-anchor", "middle")
-        .attr("x", width/2)
-        .attr("y", margin.top - 20)
-        .text("Passenger-km per Country in Europe")
-        .style("font-size","26px");
-
 });

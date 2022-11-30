@@ -56,11 +56,11 @@ Promise.all([
         .reflectY(true)
         .fitSize([width, height], countries);  // minus margin + translate and transform by the margin
     
-    // Background
-    svg.append('rect')
-        .attr('width', width)
-        .attr('height', height)
-        .attr('fill', '#AAB3D3')
+    // // Background
+    // svg.append('rect')
+    //     .attr('width', width)
+    //     .attr('height', height)
+    //     .attr('fill', '#AAB3D3')
 
     // Define the path
     const path = d3.geoPath(projection);
@@ -125,4 +125,29 @@ Rkm per 1k km<sup>2</sup>: ${d3.format(",.2f")(info && info.route_km_per_size)}`
         tooltip.style("visibility", "hidden");
         d3.select(this).attr("fill", d => {return (d.properties.geounit in dataByCountry) ? color(dataByCountry[d.properties.geounit].route_km_per_size) : '#979797';})
     });
+
+    // Annotation
+    const annotations = [
+        {
+            note: {
+            //   label: "Switzerland",
+            title: "Switzerland",
+            wrap: 150,  // try something smaller to see text split in several lines
+            padding: 0   // More = text lower
+            },
+            color: ["red"],
+            x: 163,
+            y: 195,
+            dy: -130,
+            dx: -70
+        }
+    ]
+
+    const makeAnnotations = d3.annotation()
+        .annotations(annotations)
+
+    svg.append("g")
+        .style("opacity", 1)
+        .attr("id", "annotation")
+        .call(makeAnnotations)
 });
