@@ -1,4 +1,4 @@
-d3.csv('trains_europe.csv').then(data => {    
+d3.csv('data/trains_europe.csv').then(data => {    
     // Chart sizes
     const height = 500,
         width = 800,
@@ -67,13 +67,15 @@ d3.csv('trains_europe.csv').then(data => {
         } else {
             // Add lines
             g.append("path")
+                .attr("id", country)
                 .datum(countryData)
                 .attr("fill", "none")
                 .attr("stroke", "#ccc")
-                .attr("d", line)
+                .attr("d", line);
             
             // Add invisible country labels
             g.append("text")
+                .attr("id", country)
                 .text(country)
                 .attr("x", x(lastEntry.year) + 3)
                 .attr("y", y(lastEntry.passenger_km_per_capita))
@@ -87,7 +89,7 @@ d3.csv('trains_europe.csv').then(data => {
                 d3.select(this).classed("highlight", true);
                 });
         }
-    }
+    }    
 
     // Define points
     let dots = svg.append("g")

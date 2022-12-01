@@ -23,8 +23,8 @@ const svg = d3.select("#eu_rkm")
 
 // Load the data
 Promise.all([
-    d3.csv("infrastructure_europe.csv"),
-    d3.json("eu_shapes.json")
+    d3.csv("data/infrastructure_europe.csv"),
+    d3.json("data/eu_shapes.json")
     ]).then(([data, shapes]) => {
 
     // Data conversion

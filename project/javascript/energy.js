@@ -1,4 +1,4 @@
-d3.csv("trains_switzerland.csv").then(data => {
+d3.csv("data/trains_switzerland.csv").then(data => {
     // Basic Setup
     const height = 500,
         width = 800,
@@ -206,9 +206,9 @@ d3.csv("trains_switzerland.csv").then(data => {
         .attr("id", "annotation")
         .attr("rx", 6)
         .attr("ry", 6)
-        .attr("x", margin.left + 467)
+        .attr("x", margin.left + 460)
         .attr("y", margin.top + 30)
-        .attr("width", 174)
+        .attr("width", 170)
         .attr("height", 45)
         .attr("fill", "none")
         .attr("stroke", '#FF1212')
@@ -217,7 +217,7 @@ d3.csv("trains_switzerland.csv").then(data => {
     bar.append("text")
         .attr("id", "annotation")
         .attr("text-anchor", "middle")
-        .attr("x", margin.left + 553)
+        .attr("x", margin.left + 545)
         .attr("y", margin.top + 49)
         .text("Drop in demand (Pkm) but")
         .attr("fill", '#FF1212')
@@ -228,7 +228,7 @@ d3.csv("trains_switzerland.csv").then(data => {
     bar.append("text")
         .attr("id", "annotation")
         .attr("text-anchor", "middle")
-        .attr("x", margin.left + 553)
+        .attr("x", margin.left + 545)
         .attr("y", margin.top + 49)
         .text("offer (Tkm) remains constant")
         .attr("fill", '#FF1212')
