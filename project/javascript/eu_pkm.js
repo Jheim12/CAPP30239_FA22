@@ -1,3 +1,5 @@
+// Source: class material
+
 d3.csv('data/trains_europe.csv').then(data => {    
     // Chart sizes
     const height = 500,
@@ -83,7 +85,7 @@ d3.csv('data/trains_europe.csv').then(data => {
                 .attr("fill", "orange")
                 .attr("opacity", 0);
 
-            // Highlight lines and text when hovering
+            // Highlight lines and text when hovering over text
             g.on('mouseover', function () {
                 d3.selectAll(".highlight").classed("highlight", false);
                 d3.select(this).classed("highlight", true);

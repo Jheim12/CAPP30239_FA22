@@ -1,3 +1,6 @@
+// Source: class material
+
+
 d3.csv("data/trains_switzerland.csv").then(data => {
     // Basic Setup
     const height = 500,
@@ -13,7 +16,7 @@ d3.csv("data/trains_switzerland.csv").then(data => {
     // Transform the Data
     for (let d of data) {
         d.year = +d.year
-        d.passenger_km = +d.passenger_km            // Change to train_km?!
+        d.passenger_km = +d.passenger_km
         d.train_km = +d.train_km
         d.total_passenger_energy_consumption = +d.total_passenger_energy_consumption
         d.energy_consumption_per_passenger = +d.energy_consumption_per_passenger;

@@ -1,8 +1,4 @@
-// Add annotation pointing to Switzerland?
-// Circle/Highlight the border of Switzerland?
-// Colors that fade into the background?
-
-// Leave titles outside of svg
+// Source: class material
 
 // Define tooltip
 const tooltip = d3.select("body")
@@ -51,7 +47,7 @@ Promise.all([
     const projection = d3
         .geoIdentity()
         .reflectY(true)
-        .fitSize([width, height], countries);  // minus margin + translate and transform by the margin
+        .fitSize([width, height], countries);
     
     // Define the path
     const path = d3.geoPath(projection);
@@ -115,13 +111,13 @@ Rkm per 1k km<sup>2</sup>: ${d3.format(",.2f")(info && info.route_km_per_size)}`
     });
 
     // Annotation
+    // https://d3-graph-gallery.com/graph/custom_annotation.html
     const annotations = [
         {
             note: {
-            //   label: "Switzerland",
             title: "Switzerland",
-            wrap: 150,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 150,
+            padding: 0
             },
             color: ["#FF1212"],
             x: 163,
@@ -132,10 +128,10 @@ Rkm per 1k km<sup>2</sup>: ${d3.format(",.2f")(info && info.route_km_per_size)}`
     ]
 
     const makeAnnotations = d3.annotation()
-        .annotations(annotations)
+        .annotations(annotations);
 
     svg.append("g")
         .style("opacity", 1)
         .attr("id", "annotation")
-        .call(makeAnnotations)
+        .call(makeAnnotations);
 });

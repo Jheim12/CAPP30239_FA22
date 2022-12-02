@@ -1,8 +1,9 @@
+/* Text */
+
 * {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 2;
     text-align: justify;
-    /* margin-top: 10px; */
 }
 
 p {
@@ -21,6 +22,7 @@ h3 {
 #chart-title {
     text-align: center;
     font-weight: bold;
+    text-indent: 0px;
 }
 
 #source {
@@ -31,6 +33,13 @@ h3 {
     font-size: 10px;
 }
 
+text {
+    font-size: 10px;
+}
+
+
+/* Visualizations */
+
 #container {
     max-width: 800px;
     margin: 0 auto;
@@ -40,9 +49,6 @@ h3 {
     width: 100%; 
 }
 
-text {
-    font-size: 10px;
-}
 
 .highlight path {
     stroke: #0a4a90;
@@ -85,6 +91,10 @@ text {
     fill: #FF1212;
 }
 
+
+/* Toggle switch */
+/* https://www.w3schools.com/howto/howto_css_switch.asp */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -94,14 +104,12 @@ text {
     vertical-align: middle;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -140,7 +148,6 @@ input:checked + .slider:before {
     transform: translateX(8.6px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }
