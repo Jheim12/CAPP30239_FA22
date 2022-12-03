@@ -124,6 +124,18 @@ Rkm per 1k km<sup>2</sup>: ${d3.format(",.2f")(info && info.route_km_per_size)}`
             y: 195,
             dy: -130,
             dx: -70
+        },
+        {
+            note: {
+            title: "Germany",
+            wrap: 150,
+            padding: 0
+            },
+            color: ["black"],
+            x: 163,
+            y: 144,
+            dy: -105,
+            dx: -56.5
         }
     ]
 
