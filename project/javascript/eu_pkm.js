@@ -181,6 +181,6 @@ Population: ${d3.format(",.2f")(d.population / 1000000, 2)} M`)
         .attr("x", -margin.top - (height -margin.bottom)/2)
         .attr("y", 25)
         .attr("transform", "rotate(-90)")
-        .text("Million km/10k inhabitants")
+        .text("Million km per 10k Inhabitants")
         .style("font-size","15px");
 });
