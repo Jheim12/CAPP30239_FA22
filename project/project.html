@@ -14,14 +14,14 @@
         </h1>
 
         <h3>
-            The Need for both Infrastructure and Operations
+            The Need for Good Infrastructure and Operations
         </h3>
         <p>
             The Japanese Shinkansen or the French TGV are known for their impressive feats of engineering that built an infrastructure in which trains can travel so fast that they are serious rivals to the airline industry. By its nature, railroads require good infrastructure to function efficiently and offer good service to their passengers. Therefore, it is unsurprising that countries like Switzerland, which is known for having one of the world’s best railway networks, heavily invest in the physical components required for rail transportation. For instance, the Swiss did just complete the longest rail tunnel in the world, the Gotthard Base Tunnel, and purchased a new fleet of rolling stock with innovative roll compensation technology to increase curve speed.
         </p><p>
             However, those infrastructure projects are expensive and take a long time to complete. For instance, the Gotthard Base Tunnel took 70 years of work, 17 of actual construction, and cost CHF12.2 billion<sup><a href="#refs">(1)</a></sup>. Still, it is a massive success as it creates a high-speed connection through the Alps, effectively merging the North and South of Europe. Time and investment, however, do not guarantee success which was illustrated by the new fleet of rolling stock which cost CHF1.9 billion and suffered long delivery delays<sup><a href="#refs">(2)</a></sup>. The roll compensation technology will never work as intended meaning that higher curve speeds will not be achieved<sup><a href="#refs">(3)</a></sup>.
         </p><p>
-            Luckily, while infrastructure is one major part of determining the success of a railroad network, its operation is just as important since consumers highly regard punctuality and reliability. This means that operations are the second axis of innovation in addition to infrastructure. Probably the most important operational aspect of railroading is scheduling. However, trains have always run on fixed schedules and the last innovation, Precision Scheduled Railroading, took place three decades ago. Despite it being very successful, one likely never heard of it because it only concerned freight traffic<sup><a href="#refs">(4)</a></sup>.
+            Luckily, while infrastructure is a major part of determining the success of a railroad network, its operation is just as important since consumers highly regard punctuality and reliability. This means that operations are the second axis of innovation in addition to infrastructure. Probably the most important operational aspect of railroading is scheduling. However, trains have always run on fixed schedules and the last innovation, Precision Scheduled Railroading, took place three decades ago. Despite it being very successful, one likely never heard of it because it only concerned freight traffic<sup><a href="#refs">(4)</a></sup>.
         </p><p>
             Therefore, one is allowed to ask whether passenger schedules have to be fixed. What if we could leverage today’s advances in artificial intelligence to predict passenger demand and adjust the number of trains running on a given route accordingly? This has the potential of being an innovation that is cheap and fast to implement when compared to infrastructure projects.
         </p>
@@ -30,34 +30,32 @@
             Europe's Infrastructure Status Quo
         </h3>
         <p>
-            Before exploring the possible benefits of flexible schedules, we must focus on infrastructure one last time. Railroad infrastructure encompasses many different structures from the rolling stock and tracks to hydroelectric plants and stations. However, the state of a country’s rail infrastructure can be proxied by the rail kilometers (Rkm) adjusted by the size of the country. As one can see, the rail infrastructure across Europe varies drastically with central Europe. While the countries of central Europe have the densest networks, others lag behind.
+            Before exploring the possible benefits of flexible schedules, we must focus on infrastructure one last time. Railroad infrastructure encompasses many different structures from the rolling stock and tracks to hydroelectric plants and stations. However, the state of a country’s rail infrastructure can be proxied by the rail kilometers (Rkm) adjusted by the size of the country. As one can see, the rail infrastructure across Europe varies drastically. While the countries of central Europe have the densest networks, others lag behind.
         </p>
         <!-- Rail Infrastructure Choropleth -->
         <p id="chart-title">
-            Rail Infrastructure Across Europe in 2019
+            Varying Rail Network Density in Europe
         </p>
         <div id="eu_rkm"></div>
         <div id="map_legend"></div>
         <p id="source">
             Source: The World Bank Data (2022), World Bank Group, Washington, D.C. (US) (<a href="https://data.worldbank.org/indicator/IS.RRS.TOTL.KM">rail-km</a>, <a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2">country size</a>)
-
         </p>
         <p>
-            Interestingly, Germany’s railroad performance is generally regarded as worse than Switzerland’s<sup><a href="#refs">(5)</a></sup> despite having seemingly better infrastructure. This can mostly be traced back to operations as Germany’s trains are performing much worse when it comes to delays for instance. In fact, in Germany, only 66% of long-distance trains arrive within 5 minutes of their scheduled time<sup><a href="#refs">(6)</a></sup> while 91% of their Swiss equivalent get to their destination with a delay of fewer than 3 minutes<sup><a href="#refs">(7)</a></sup>. This confirms that infrastructure is necessary to running a successful railroad but not sufficient on its own. Having as many trains and tracks as possible won’t help a company if it doesn’t know how to run them efficiently. This is why operations, in other words scheduling, is so important, which leaves means that flexible schedules have a major impact on the overall performance of railway networks.
+            Interestingly, Germany’s railroad performance is generally regarded as worse than Switzerland’s<sup><a href="#refs">(5)</a></sup> despite having a denser network. This can mostly be traced back to operations as Germany’s trains are performing much worse when it comes to delays for instance. In fact, in Germany, only 66% of long-distance trains arrive within 5 minutes of their scheduled time<sup><a href="#refs">(6)</a></sup> while 91% of their Swiss equivalent get to their destination with a delay of fewer than 3 minutes<sup><a href="#refs">(7)</a></sup>. This confirms that infrastructure is necessary to running a successful railroad but not sufficient on its own. Having as many trains and tracks as possible won’t help a company if it doesn’t know how to run them efficiently. This is why operations, in other words scheduling, is so important, which means that flexible schedules could have a major impact on the overall performance of a railway network.
         </p>
 
         <h3>
-            Economist’s Point of View
+            Economists’ Point of View
         </h3>
         <p>
-            To truly understand the potential of flexible schedules, one needs to analyze the current situation like an economist. Using Adam Smith’s most basic model, the one of offer and demand, this is relatively easy. Demand is of course determined by the passengers and how much they travel. With regards to railroading, this is best summarized by the passenger kilometers (Pkm) but to compare countries, one needs to adjust these values by the population to get the kilometers traveled per person.
+            To truly understand the potential of flexible schedules, one needs to analyze the current situation like an economist. Using the field's most basic model, the one of offer and demand, this is relatively easy. Demand is of course determined by the passengers and how much they travel. With regards to railroading, this is best summarized by the passenger kilometers (Pkm) but to compare countries, one needs to adjust these values by the population to get the kilometers traveled per person.
         </p><p>
-            The chart shows that Switzerland is atop all European countries by a large margin. This is unsurprising because, as discussed, it excels in operations compared to its neighbors whilst having good (but not the best) infrastructure. This, once again, confirms that infrastructure is not everything but that operations play an important role.
+            The chart shows that Switzerland is atop all European countries by a large margin. This is unsurprising because, as discussed, it excels in its operations compared to its neighbors whilst having good (but not the best) infrastructure. This, once again, confirms that infrastructure is not everything and that operations play an important role.
         </p>
         <!-- Passenger-Km Line Chart -->
         <p id="chart-title">
-            Switzerland is Europe's Outlier <br>
-            in Terms of Raildroad Services Demand
+            Switzerland is Europe's Outlier in Terms of Passenger Demand
         </p>
         <div id="eu_pkm"></div>
         <p id="source">
@@ -66,11 +64,11 @@
             The World Bank Data (2022), World Bank Group, Washington, D.C. (US) (<a href="https://data.worldbank.org/indicator/SP.POP.TOTL">population</a>)
         </p>
         <p>
-            However, having much higher ridership than the other countries, Switzerland was affected just as much by the pandemic in which the Pkm per capita dropped for every country. Logically, an economist would see this as a drop in demand and would expect that the railway companies lower their offer to re-establish the equilibrium between offer and demand.
+            However, despite having much higher ridership than the other countries, Switzerland was affected just as much by the pandemic during which the Pkm per capita dropped for every country. Logically, an economist would see this as a drop in demand and would expect that the railway companies lower their offer to re-establish the equilibrium between offer and demand.
         </p><p>
-            Reducing the offer, logically, cannot come from infrastructure as it is, by its nature, fixed in the short term and decommissioning some structures makes little sense. Operations, however, can be adapted relatively fast and if schedules were flexible, this task would become very easy.
+            Reducing the offer, logically, cannot come from infrastructure as it is, by its nature, fixed in the short term and decommissioning some structures makes little sense in this context. Operations, however, can be adapted relatively fast and if schedules were flexible, this task would become very easy.
         </p><p>
-            Of course, pandemics are infrequent, but similar changes in demand also happen at a much lower scale. For instance, demand for routes to skiing resorts depends heavily on the snowfall. Hence, if more snow is anticipated, flexible schedules would allow more trains to run to accommodate demand.
+            Of course, pandemics are infrequent, but similar changes in demand also happen at a much lower scale. For instance, demand for routes to skiing resorts depends heavily on snowfall. Hence, if more snow is anticipated, flexible schedules would allow more trains to run in an effort to accommodate demand.
         </p>
 
         <h3>
@@ -79,9 +77,9 @@
         <p>
             It is true that railroad transportation services are a public good as many of the railways are (at least partially) nationalized in Europe. Thus, in exchange for their taxes, the inhabitants have a right to frequent service even if they live on a route with low ridership. This is one of the main arguments against flexible schedules as it could and likely would negatively affect rural communities that rely on this service.
         </p><p>
-            However, the consequences of not using flexible schedules also have to be taken into account. Those consequences can be reflected as costs, noise, but also in the environment. Looking back at the pandemic, we can see that ridership in Switzerland decreased by 41% between 2019 and 2020 while energy consumption did not change significantly.
+            However, the consequences of not using flexible schedules also have to be taken into account. Those consequences can be reflected as costs, noise, but also in the environment. Looking back at the pandemic, we can see that ridership in Switzerland decreased by 41% between 2019 and 2020 while energy consumption did not change nearly as significantly.
         </p><p>
-            Now, were effort to tailoring the offer to the demand made in order to get back to the economists’ much-loved equilibrium? Flip the switch to find out!
+            Now, were efforts to tailor the offer to the demand made in order to get back to the economists’ much-loved equilibrium? Flip the switch to find out!
             <label class="switch">
                 <input type="checkbox", id="energy_checkbox">
                 <span class="slider round"></span>
@@ -89,40 +87,40 @@
         </p>
         <!-- Energy Bar Chart -->
         <p id="chart-title">
-            Offer Inflexibility Leads to Increased <br>
+            Offer Inflexibility Led to Increased <br>
             Energy Consumption per Passenger in Switzerland
         </p>
         <div id="energy"></div>
         <p id="source">
-            Source: Swiss National Railway Company, Statistics Portal, Bern (CH) (<a href="https://reporting.sbb.ch/en/home?sv_lang=3&sv_lang_change=true">upon custom request</a>)
+            Source: Swiss National Railway Company, Statistics Portal, Bern (CH) (<a href="https://reporting.sbb.ch/en/home?sv_lang=3&sv_lang_change=true">upon request</a>)
         </p>
         <p>
-            Indeed, the offer remained constant since the national railway company did not reduce the number of kilometers covered by its trains (Tkm). This creates a significant gap between the offer and demand highlighted by the red rectangle.
+            Indeed, the offer of the Swiss National Railway Company remained constant as a reduction in the number of kilometers covered by the trains (Tkm) is not observed. This creates a significant gap between the offer and demand highlighted by the red rectangle.
         </p><p>
             Not only does this negatively affect profitability, but it means that an opportunity to save energy was not used as the energy consumption per Pkm increased drastically. Especially with the energy crisis Europe is facing, this is a matter of serious concern.
         </p><p>
             With flexible schedules, this issue could have potentially been fixed as the gap between offer and demand would not exist. Fewer trains would have circulated on the network (but enough to guarantee the coverage of basic needs) which would logically lead to significantly lower energy consumption.
         </p><p>
-            Yet, no railway company has implemented flexible schedules at a large scale, which means that their impact can not be quantified at this point since there is no counterfactual. However, this case shows the immense potential they have and should, at the very least, spark some debate within the railroading industry. Afterall, it would be a shame to dig tunnels and have the most innovative rollingstock but still fail to use them effectively.
+            Yet, no railway company has implemented flexible schedules at a large scale, which means that their impact can not be quantified at this point due to a lack of counterfactuals. However, this case shows the immense potential they have and should, at the very least, spark some debate within the railroading industry. Afterall, it would be a shame to dig tunnels and have the most innovative rollingstock but still fail to use them effectively.
         </p>
 
         <h3>Process</h3>
         <p>
-            My goal was to analyze the environmental impact of Railroading in Switzerland, with a focus on how it varied during the pandemic and how it compares to its European neighbors. <br>
+            My goal was to analyze the environmental impact of Railroading in Switzerland, with a focus on how it varied during the pandemic and compares to its European neighbors. <br>
         </p><p>
-            First, I had to find the data I wanted, which was fairly easy as the World Bank and the Swiss National Railway Company have some high-quality data on the topic of interest. The only slight difficulty I faced during the data-gathering process was that I had to aggregate the data for the line chart from yearly reports. However, this was more time-consuming than technically difficult. <br>
+            First, I had to find the data I wanted, which was fairly easy as the World Bank and the Swiss National Railway Company have some high-quality data on the topic of interest. The only slight difficulty I faced during the data-gathering process was that I had to aggregate the data for the line chart from several yearly reports. However, this was more time-consuming than technically difficult. <br>
         </p><p>
             Once I had the data, I realized that it was clean but had some missing values. Luckily, the latter would not be an issue as I was restricting my analysis to the recent years which had good coverage. <br>
         </p><p>
-            Deciding on the charts was a little more difficult. A choropleth seemed well-suited to show the variance in infrastructure across Europe because it displays well the way certain regions of the continent have denser infrastructure than others. Additionally, it allows the reader, with a little annotation and highlighting, to understand that Switzerland does not have the densest infrastructure which is the second important takeaway of the visualization. Finally, a tooltip allows the curious reader to explore the raw data behind the choropleth itself. <br>
+            Deciding on the charts was a little more difficult. A choropleth seemed well-suited to show the variance in infrastructure across Europe because it displays the way certain regions of the continent have denser infrastructure than others well. Additionally, it allows the reader, with a few annotations and a little highlighting, to understand that Switzerland does not have the densest infrastructure which is the second important takeaway of the visualization. Finally, a tooltip allows the curious reader to explore the raw data behind the choropleth itself. <br>
         </p><p>
-            The second chart was the easiest one to choose because, while exploring the data with some line charts, this one particularly stood out with Switzerland as the outlier which fit the narrative perfectly. Additionally, this chart, along with the prior, allows one to understand that good infrastructure is a necessary but not sufficient condition for an effective railroad network. I decided to use the greyscale to guide the attention to Switzerland as the reader does not need to focus on the other countries but I did use an interactive element to give them the option of exploring them. <br>
+            The second chart was the easiest one to choose because, while exploring the data with some line charts, this one particularly stood out with Switzerland as the outlier which fit the narrative perfectly. Additionally, this chart, along with the prior, allows one to understand that good infrastructure is a necessary but not sufficient condition for an effective railroad network. I decided to use the greyscale to guide the attention towards Switzerland as the reader does not need to focus on the other countries but I did use an interactive element to give them the option of exploring them. <br>
         </p><p>
-            Finally, the last visualization is a mix of a bar chart and a line chart. I initially wanted to only use a mirrored bar chart with the Pkm on top and energy consumption on the bottom. This already allowed the reader to understand that there is a disparity between the ridership and the environmental impact during the covid pandemic. However, I found that essentially, I plotted the demand on the top half (Pkm) so it would be easy to add the offer (Tkm) and a small rectangle would visualize the excess offer perfectly. I placed another line on top of the bottom bars to show how much more energy is used per Pkm which should shock the readers. Finally, I made the lines and the annotation appear with a toggle to make the reader first analyze some data before showing them exactly how large the disparity is, which hopefully adds a little dramatic effect. <br>
+            Finally, the last visualization is a mix of a bar chart and a line chart. I initially wanted to only use a mirrored bar chart with the Pkm on top and energy consumption on the bottom. This already allowed the reader to understand that there is a disparity between the ridership and the environmental impact during the covid pandemic. However, I found that essentially, I plotted the demand on the top half (Pkm) so it would be easy to add the offer (Tkm) and a small rectangle would visualize the excess offer perfectly. I placed another line on top of the bottom bars to show how much more energy is used per Pkm which should disturb the readers. Finally, I made the lines and the annotation appear with a toggle to make the reader analyze some data first before showing them exactly how large the disparity is, which hopefully adds a little dramatic effect. <br>
         </p><p>
-            For each of the three graphs, I made sure to use a consistent, accessible color scheme. Most of the information is on a blue scale while the parts I want to highlight are in red in an attempt to guide the reader to the important conclusions that can be found within each chart. <br>
+            For each of the three graphs, I made sure to use a consistent, accessible color scheme. Most of the information is on a blue scale while the parts I wanted to highlight are in red to guide the reader to the important conclusions that can be found within each chart. <br>
         </p><p>
-            To avoid the confirmation bias, I decided to make all of my charts before making a hard outline for the story. I had a general idea in mind, but, in retrospect, it was not precise or clear enough. This made the writing process a lot harder. My charts were showing interesting trends, and somewhat fitting the story but it was hard to piece it all together. I had to shift from my initial idea of discussing the environmental impact, which now only plays a minor role in the story, to raising awareness about an issue and suggesting flexible schedules as a potential solution to it. If I could start over again, I would spend more time figuring out the story and before moving on with creating the charts. Nevertheless, I am more than happy with the result and even more about the learning process.
+            To avoid confirmation bias, I decided to make all of my charts before making a hard outline for the story. I had a general idea in mind, but, in retrospect, it was not precise or clear enough. This made the writing process a lot harder. My charts were showing interesting trends, and somewhat fitting the story but it was hard to piece it all together. I had to shift from my initial idea of discussing the environmental impact, which now only plays a minor role in the story, to raising awareness about an issue and suggesting flexible schedules as a potential solution to it. If I could start over again, I would spend more time figuring out the story and before moving on with creating the charts. Nevertheless, I am more than happy with the result and the learning process.
         </p>
 
         <h3 id="refs">References</h3>
