@@ -2,7 +2,7 @@
 
 ### Jonas Heim
 
-Op-ed on why flexible schedules hold great potential for the railroading industry.
+Op-ed on why flexible schedules hold great potential for the railroading industry. Want to read it? [Here](https://jheim12.github.io/CAPP30239_FA22/project/project.html) it is!
 
 ### Repository Structure
 
